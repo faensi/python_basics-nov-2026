@@ -1,0 +1,10 @@
+name: python_grundlagen
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - ipython
+  - spyder
+  - jupyter
+  - notebook
+  - ipykernel

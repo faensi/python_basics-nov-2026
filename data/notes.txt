@@ -1,0 +1,4 @@
+Probenprotokoll
+Bad 1: 20.1 C
+Bad 2: 19.8 C
+Raum: 21.5 C

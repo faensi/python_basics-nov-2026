@@ -1,0 +1,7 @@
+.github
+examle*/
+organisatorisches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+this_course/data/report.txt
