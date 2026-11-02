@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie rufen eine Funktion mit Positions- und mit Schlüsselwortargumenten auf. Sie unterscheiden einen lokalen Namen von einem globalen und vermeiden eine Liste als Standardargument.
+In dieser Einheit rufst du eine Funktion mit Positions- und mit Schlüsselwortargumenten auf, unterscheidest einen lokalen Namen von einem globalen und vermeidest eine Liste als Standardargument.
 
 ## Ablauf in Spyder
 
@@ -25,13 +25,13 @@ clip(22.0, low=19.0, high=21.0)
 
 Beim ersten Aufruf entscheidet die Position. Beim zweiten der Name des Parameters. Schlüsselwortargumente dürfen nur nach den Positionsargumenten stehen.
 
-Ein Parameter darf einen Standardwert haben. `shift(reading, offset=0.0)` addiert 0, wenn Sie keinen Offset angeben.
+Ein Parameter darf einen Standardwert haben. `shift(reading, offset=0.0)` addiert 0, wenn du keinen Offset angibst.
 
 ## Lokal und global
 
-Ein Name, den Sie in einer Funktion zuweisen, ist lokal. Er verdeckt einen gleichnamigen Namen außerhalb. `shadow` setzt `step` auf 5 und lässt den globalen Zähler auf 0.
+Ein Name, den du in einer Funktion zuweist, ist lokal. Er verdeckt einen gleichnamigen Namen außerhalb. `shadow` setzt `step` auf 5 und lässt den globalen Zähler auf 0.
 
-Wer den globalen Namen wirklich ändern will, schreibt `global step` vor der Zuweisung. `advance` macht das. Bevorzugen Sie in diesem Kurs Rückgabewerte. `global` ist hier nur zu sehen, damit die Wirkung nicht versehentlich passiert.
+Wer den globalen Namen wirklich ändern will, schreibt `global step` vor der Zuweisung. `advance` macht das. Bevorzuge in diesem Kurs Rückgabewerte. `global` ist hier nur zu sehen, damit die Wirkung nicht versehentlich passiert.
 
 Parameter sind lokale Namen der Funktion.
 

@@ -5,15 +5,15 @@
 
 ## Ziel
 
-Sie binden Module der Standardbibliothek ein, unterscheiden die drei üblichen Importformen und lesen den Docstring einer Funktion. Sie sehen, dass eine Zuweisung in einer Funktion lokal bleibt.
+In dieser Einheit bindest du Module der Standardbibliothek ein, unterscheidest die drei üblichen Importformen und liest den Docstring einer Funktion. Dabei siehst du, dass eine Zuweisung in einer Funktion lokal bleibt.
 
 ## Ablauf in Spyder
 
 1. Arbeitsverzeichnis: `this_course`.
 2. Skript mit F5 ausführen.
-3. `spread` ergänzen. Benutzen Sie `math.fabs`.
+3. `spread` ergänzen. Benutze `math.fabs`.
 4. In der Konsole `check_spread()` aufrufen.
-5. Optional in der Konsole: `help(math.fabs)`. Die Ansicht verlassen Sie mit `q`.
+5. Optional in der Konsole: `help(math.fabs)`. Die Ansicht verlässt du mit `q`.
 
 ## Drei Importformen
 
@@ -23,7 +23,7 @@ import math as m
 from math import fabs
 ```
 
-Alle drei erreichen die Betragsfunktion. Der Name, unter dem Sie sie rufen, ist verschieden:
+Alle drei erreichen die Betragsfunktion. Der Name, unter dem du sie rufst, ist verschieden:
 
 | Form | Aufruf | Namensraum |
 | --- | --- | --- |
@@ -58,7 +58,7 @@ Der Docstring ist der Text direkt unter der Funktionszeile. `math.fabs.__doc__` 
 
 ## Übung
 
-`spread(19.5, 21.0)` liefert den Betrag der Differenz, also `1.5`. Nutzen Sie `math.fabs`.
+`spread(19.5, 21.0)` liefert den Betrag der Differenz, also `1.5`. Nutze `math.fabs`.
 
 ## Lösung
 

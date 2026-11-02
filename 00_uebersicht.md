@@ -2,7 +2,7 @@
 
 Vier Tage, ein Arbeitsverzeichnis: der Ordner `this_course`. Die Skripte liegen in `tag1` bis `tag4`. Daten liegen in `data/`.
 
-Die Nummern laufen über die Tage durch. Öffnen Sie zu jeder Nummer zuerst die Markdown-Datei, dann das Skript.
+Die Nummern laufen über die Tage durch. Öffne zu jeder Nummer zuerst die Markdown-Datei, dann das Skript.
 
 ## Tag 1: Überblick und Datenstrukturen
 

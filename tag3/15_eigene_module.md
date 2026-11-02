@@ -6,12 +6,12 @@
 
 ## Ziel
 
-Sie lagern Funktionen in eine eigene Datei aus, importieren sie und lesen die Hilfe aus dem Docstring.
+In dieser Einheit lagerst du Funktionen in eine eigene Datei aus, importierst sie und liest die Hilfe aus dem Docstring.
 
 ## Ablauf in Spyder
 
 1. Arbeitsverzeichnis: `this_course`.
-2. Öffnen Sie zuerst `measurement.py`, dann das Skript der Einheit.
+2. Öffne zuerst `measurement.py`, dann das Skript der Einheit.
 3. Skript mit F5 ausführen.
 4. `summary` ergänzen.
 5. In der Konsole `check_summary()` aufrufen.
@@ -21,13 +21,13 @@ Sie lagern Funktionen in eine eigene Datei aus, importieren sie und lesen die Hi
 
 `measurement.py` enthält den Mittelwert, die Abweichung, die Toleranzprüfung und die Umrechnung von Grad Celsius nach Kelvin. Das sind dieselben Rechnungen wie an den vorigen Tagen, jetzt an einem Ort, den mehrere Skripte nutzen können.
 
-Die Datei liegt neben `15_eigene_module.py`. Wenn Sie das Skript mit F5 starten, findet `import measurement` diese Datei, weil Spyder den Ordner des Skripts durchsucht. Ein `import measurement` in einer beliebigen anderen Konsole ohne diesen Ordner findet die Datei nicht.
+Die Datei liegt neben `15_eigene_module.py`. Wenn du das Skript mit F5 startest, findet `import measurement` diese Datei, weil Spyder den Ordner des Skripts durchsucht. Ein `import measurement` in einer beliebigen anderen Konsole ohne diesen Ordner findet die Datei nicht.
 
 ## Docstring
 
 Der englische Text unter `def mean` ist der Docstring. Er beschreibt, was die Funktion leistet, nicht jede Zeile im Körper. `measurement.mean.__doc__` gibt ihn aus. Das Skript druckt ihn bei F5.
 
-Docstrings in diesem Kurs sind Englisch, wie die übrigen Programmnamen. Der Erklärungstext für Sie bleibt in dieser Markdown-Datei.
+Docstrings in diesem Kurs sind Englisch, wie die übrigen Programmnamen. Der Erklärungstext für dich bleibt in dieser Markdown-Datei.
 
 ## Übung
 

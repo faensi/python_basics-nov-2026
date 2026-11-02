@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie lesen eine Eingabe als Text, wandeln sie in eine Zahl und formatieren eine Zeile auf zwei Wegen: mit dem Prozentoperator und mit der Methode `format`.
+In dieser Einheit liest du eine Eingabe als Text, wandelst sie in eine Zahl und formatierst eine Zeile auf zwei Wegen: mit dem Prozentoperator und mit der Methode `format`.
 
 ## Ablauf in Spyder
 
@@ -13,7 +13,7 @@ Sie lesen eine Eingabe als Text, wandeln sie in eine Zahl und formatieren eine Z
 2. Skript mit F5 ausführen. F5 fragt nichts ab.
 3. `format_line`, `format_line_method` und `parse_reading` ergänzen.
 4. In der Konsole `check_formatting()` aufrufen.
-5. Wenn Sie eine echte Eingabe sehen wollen: in der Konsole `demo_input()` aufrufen, in die Konsole klicken und eine Zahl tippen.
+5. Wenn du eine echte Eingabe sehen willst: in der Konsole `demo_input()` aufrufen, in die Konsole klicken und eine Zahl tippen.
 
 ## `input`
 
@@ -34,7 +34,7 @@ Dieselbe Zeile, eine Nachkommastelle:
 
 `%s` und `{}` stehen für den Sensornamen, `%.1f` und `{:.1f}` für die Temperatur mit einer Nachkommastelle. Für den Sensor `bath` und 20,1 Grad Celsius entsteht der Text `bath: 20.1 C`.
 
-Im Python-Text bleibt der Punkt das Dezimalzeichen. Im deutschen Satz schreiben Sie das Komma.
+Im Python-Text bleibt der Punkt das Dezimalzeichen. Im deutschen Satz schreibst du das Komma.
 
 Eine neuere Schreibweise sind f-Strings, etwa `f"{sensor}: {celsius:.1f} C"`. Die Aufgaben dieser Einheit bleiben beim Prozentoperator und bei `format`, weil das die beiden verlangten Wege sind.
 
@@ -42,7 +42,7 @@ Eine neuere Schreibweise sind f-Strings, etwa `f"{sensor}: {celsius:.1f} C"`. Di
 
 - `format_line("bath", 20.0)` liefert `"bath: 20.0 C"` mit dem Prozentoperator.
 - `format_line_method("bath", 20.0)` liefert denselben Text mit `format`.
-- `parse_reading(" 20.5 ")` liefert die Zahl `20.5`. Entfernen Sie äußere Leerzeichen und rufen Sie `float` auf.
+- `parse_reading(" 20.5 ")` liefert die Zahl `20.5`. Entferne äußere Leerzeichen und rufe `float` auf.
 
 ## Lösung
 

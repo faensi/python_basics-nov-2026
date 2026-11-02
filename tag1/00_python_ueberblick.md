@@ -5,23 +5,23 @@
 
 ## Ziel
 
-Sie können ein kleines Python-Skript in Spyder starten und sagen, worin sich Python von Sprachen wie C, C++ oder Java unterscheidet.
+In dieser Einheit kannst du ein kleines Python-Skript in Spyder starten und sagen, worin sich Python von Sprachen wie C, C++ oder Java unterscheidet.
 
 ## Ablauf in Spyder
 
-1. Setzen Sie das Arbeitsverzeichnis auf den Ordner `this_course`.
-2. Öffnen Sie das Skript und führen Sie es mit F5 aus.
-3. Lesen Sie die Ausgabe in der IPython-Konsole.
-4. Ergänzen Sie die Funktion `temperature_span`.
-5. Rufen Sie in der Konsole `check_temperature_span()` auf.
+1. Setze das Arbeitsverzeichnis auf den Ordner `this_course`.
+2. Öffne das Skript und führe es mit F5 aus.
+3. Lies die Ausgabe in der IPython-Konsole.
+4. Ergänze die Funktion `temperature_span`.
+5. Rufe in der Konsole `check_temperature_span()` auf.
 
 ## Was Python ausmacht
 
-Python ist eine interpretierte Sprache. Sie schreiben den Quelltext, und der Interpreter führt ihn aus. Es gibt keinen getrennten Übersetzungsschritt, den Sie vor dem ersten Lauf abwarten müssen.
+Python ist eine interpretierte Sprache: du schreibst den Quelltext, und der Interpreter führt ihn aus. Es gibt keinen getrennten Übersetzungsschritt, den du vor dem ersten Lauf abwarten musst.
 
-Python ist dynamisch typisiert. Sie schreiben an den Namen nicht, ob er eine Zahl oder einen Text meint. Der Typ gehört zum Wert und zeigt sich zur Laufzeit. Das vertieft Einheit 02.
+Python ist dynamisch typisiert, und du schreibst an den Namen nicht, ob er eine Zahl oder einen Text meint. Der Typ gehört zum Wert und zeigt sich zur Laufzeit. Das vertieft Einheit 02.
 
-Python legt Wert auf lesbaren Text. Blöcke entstehen durch Einrückung, nicht durch geschweifte Klammern. Anweisungen brauchen kein Semikolon am Ende. Dieselbe Einrückungstiefe gehört zum selben Block. Mischen Sie keine Tabulatoren und Leerzeichen. In diesem Kurs bestehen Einrückungen aus vier Leerzeichen.
+Python legt Wert auf lesbaren Text. Blöcke entstehen durch Einrückung, nicht durch geschweifte Klammern. Anweisungen brauchen kein Semikolon am Ende. Dieselbe Einrückungstiefe gehört zum selben Block. Mische keine Tabulatoren und Leerzeichen. In diesem Kurs bestehen Einrückungen aus vier Leerzeichen.
 
 Zur Sprache gehört ein kurzer Text über guten Python-Stil, der Zen of Python. Das Skript gibt ihn mit `import this` aus. Der Text ist Englisch und bleibt unverändert. Zwei Leitlinien daraus reichen für den Anfang: lesbarer Text zählt, und einfach ist besser als verschachtelt.
 
@@ -46,11 +46,11 @@ else:
     print("at or below")
 ```
 
-Außerdem entfällt die Deklaration der Variablen vor der ersten Nutzung, und Sie starten das Skript direkt.
+Außerdem entfällt die Deklaration der Variablen vor der ersten Nutzung, und du startest das Skript direkt.
 
 ## Übung
 
-Eine Temperaturspanne ist der Abstand zwischen dem höheren und dem niedrigeren Wert. Ergänzen Sie `temperature_span`. Für 21,5 und 19,5 Grad Celsius ist das Ergebnis 2,0.
+Eine Temperaturspanne ist der Abstand zwischen dem höheren und dem niedrigeren Wert. Ergänze `temperature_span`. Für 21,5 und 19,5 Grad Celsius ist das Ergebnis 2,0.
 
 ## Lösung
 
@@ -59,6 +59,6 @@ def solution_temperature_span(high, low):
     return high - low
 ```
 
-Die Funktion steht am Ende des Skripts. `check_temperature_span()` vergleicht Ihre Fassung damit.
+Die Funktion steht am Ende des Skripts. `check_temperature_span()` vergleicht deine Fassung damit.
 
 Weiter mit `tag1/01_ipython_notebook.ipynb`.

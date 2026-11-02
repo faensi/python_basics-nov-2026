@@ -5,13 +5,13 @@
 
 ## Ziel
 
-Sie lesen einen Testfall, erkennen einen fehlgeschlagenen Vergleich an der Meldung und lassen die echten Tests für Mittelwert und Toleranz laufen.
+In dieser Einheit liest du einen Testfall, erkennst einen fehlgeschlagenen Vergleich an der Meldung und lässt die echten Tests für Mittelwert und Toleranz laufen.
 
 ## Ablauf in Spyder
 
 1. Arbeitsverzeichnis: `this_course`.
 2. Skript mit F5 ausführen.
-3. Lesen Sie zuerst die Beispielmeldung, dann die Klassen `MeanTests` und `ToleranceTests`.
+3. Lies zuerst die Beispielmeldung, dann die Klassen `MeanTests` und `ToleranceTests`.
 
 Im Terminal, aus dem Ordner `this_course`:
 
@@ -29,7 +29,7 @@ Die Funktionen `mean` und `within_tolerance` sind dieselben Rechnungen wie in `t
 
 ## Eine absichtliche Fehlermeldung
 
-`FailureSample` vergleicht 1 mit 2. Dieser Test gehört nicht zur Messaufgabe. F5 führt ihn getrennt aus und druckt die Meldung, ohne den Prozess deswegen abzubrechen. Sie sehen `AssertionError`, die beiden Werte und den Namen `test_mismatch`.
+`FailureSample` vergleicht 1 mit 2. Dieser Test gehört nicht zur Messaufgabe. F5 führt ihn getrennt aus und druckt die Meldung, ohne den Prozess deswegen abzubrechen. Dabei siehst du `AssertionError`, die beiden Werte und den Namen `test_mismatch`.
 
 Die anschließenden Tests von `MeanTests` und `ToleranceTests` müssen bestehen. Sonst beendet das Skript sich mit einem Fehlercode.
 
@@ -45,7 +45,7 @@ Die anschließenden Tests von `MeanTests` und `ToleranceTests` müssen bestehen.
 
 ## Übung
 
-Lesen Sie `test_empty_series` und `test_on_the_boundary` und ordnen Sie jede Methode einer der drei Lagen aus Einheit 18 zu: üblicher Fall, Rand, Grenze. Die Methoden sind die ausgearbeitete Lösung dieser Zuordnung. Ändern Sie die erwarteten Werte nicht, um eine Meldung zum Verschwinden zu bringen.
+Lies `test_empty_series` und `test_on_the_boundary` und ordne jede Methode einer der drei Lagen aus Einheit 18 zu: üblicher Fall, Rand, Grenze. Die Methoden sind die ausgearbeitete Lösung dieser Zuordnung. Ändere die erwarteten Werte nicht, um eine Meldung zum Verschwinden zu bringen.
 
 ## Lösung
 

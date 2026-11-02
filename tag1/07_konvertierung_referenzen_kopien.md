@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie wandeln Werte zwischen Text, Zahl, Liste und Dictionary um. Sie erkennen, wann zwei Namen dasselbe Objekt meinen, und Sie kopieren eine verschachtelte Messgruppe so, dass spätere Änderungen nicht zurückwirken.
+In dieser Einheit wandelst du Werte zwischen Text, Zahl, Liste und Dictionary um, erkennst, wann zwei Namen dasselbe Objekt meinen, und kopierst eine verschachtelte Messgruppe so, dass spätere Änderungen nicht zurückwirken.
 
 ## Ablauf in Spyder
 
@@ -37,7 +37,7 @@ second.append(21.0)
 
 `first` und `second` sind nicht zwei Listen. Es sind zwei Namen für dieselbe Liste. `append` ändert dieses eine Objekt, deshalb sieht `first` den neuen Wert ebenfalls.
 
-Eine Zahl funktioniert anders, weil Sie sie nicht an Ort und Stelle ändern, sondern den Namen neu binden. Das war die Zuweisung `celsius = 21.0` in Einheit 02.
+Eine Zahl funktioniert anders, weil du sie nicht an Ort und Stelle änderst, sondern den Namen neu bindest. Das war die Zuweisung `celsius = 21.0` in Einheit 02.
 
 ## In-Place-Methoden
 
@@ -49,7 +49,7 @@ Eine Zahl funktioniert anders, weil Sie sie nicht an Ort und Stelle ändern, son
 
 `copy.copy` legt eine neue äußere Liste an. Die Einträge darin sind weiterhin dieselben Objekte. Bei einer Liste von Zahlen genügt das, weil Zahlen nicht nachträglich innen verändert werden.
 
-`copy.deepcopy` kopiert auch die verschachtelten Listen. Das brauchen Sie, wenn eine Gruppe selbst wieder Listen enthält.
+`copy.deepcopy` kopiert auch die verschachtelten Listen. Das brauchst du, wenn eine Gruppe selbst wieder Listen enthält.
 
 Das Skript geht von dieser Gruppe aus:
 
@@ -66,7 +66,7 @@ Es ändert danach den ersten Temperaturwert auf 25,0 und hängt eine weitere Gru
 ## Übung
 
 - `sorted_snapshot([20.0, 19.0, 21.0])` liefert `[19.0, 20.0, 21.0]`. Die übergebene Liste bleibt unsortiert. Eine flache Kopie reicht.
-- `independent_groups` liefert eine tiefe Kopie. Wenn der Aufrufer danach eine Innentemperatur ändert, bleibt Ihre Kopie bei den alten Werten.
+- `independent_groups` liefert eine tiefe Kopie. Wenn der Aufrufer danach eine Innentemperatur ändert, bleibt deine Kopie bei den alten Werten.
 
 ## Lösung
 

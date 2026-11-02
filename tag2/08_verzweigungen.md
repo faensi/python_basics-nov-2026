@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie schreiben eine Verzweigung mit `if`, `elif` und `else` und verknüpfen Vergleiche mit `and`.
+In dieser Einheit schreibst du eine Verzweigung mit `if`, `elif` und `else` und verknüpfst Vergleiche mit `and`.
 
 ## Ablauf in Spyder
 

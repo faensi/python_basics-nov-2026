@@ -24,8 +24,8 @@
 - Arbeitsverzeichnis ist `this_course`, auch wenn das Skript in `tag1` liegt.
 - F5 führt die Datei aus, F9 eine Zeile.
 - Übungen stehen in den Funktionen ohne Vorsilbe `solution_`.
-- Die Prüfung rufen Sie in der Konsole auf, zum Beispiel `check_slices()`.
+- Die Prüfung rufst du in der Konsole auf, zum Beispiel `check_slices()`.
 
 ## Nächster Tag
 
-Tag 2: Verzweigungen, Schleifen und Funktionen. Beginnen Sie mit `tag2/08_verzweigungen.md`.
+Tag 2: Verzweigungen, Schleifen und Funktionen. Beginne mit `tag2/08_verzweigungen.md`.

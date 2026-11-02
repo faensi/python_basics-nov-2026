@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie lesen das Probenprotokoll und die Messreihe aus `data/` und schreiben einen kurzen Bericht nach `data/report.txt`.
+In dieser Einheit liest du das Probenprotokoll und die Messreihe aus `data/` und schreibst einen kurzen Bericht nach `data/report.txt`.
 
 ## Ablauf in Spyder
 
@@ -35,15 +35,15 @@ with open(path, encoding="utf-8") as handle:
 timestamp,sensor,celsius
 ```
 
-Danach steht in jeder Zeile ein Zeitpunkt, ein Sensorname und eine Temperatur, getrennt durch Kommas. `split(",")` zerlegt eine Zeile. Die Kopfzeile überspringen Sie mit einem ersten `readline`.
+Danach steht in jeder Zeile ein Zeitpunkt, ein Sensorname und eine Temperatur, getrennt durch Kommas. `split(",")` zerlegt eine Zeile. Die Kopfzeile überspringst du mit einem ersten `readline`.
 
-Die Temperatur im Text wandeln Sie mit `float` um, wie in Einheit 12.
+Die Temperatur im Text wandelst du mit `float` um, wie in Einheit 12.
 
 ## Schreiben
 
-`"w"` legt die Datei neu an und ersetzt einen vorhandenen Inhalt. Jede Berichtszeile schreiben Sie mit einem Zeilenende `"\n"`.
+`"w"` legt die Datei neu an und ersetzt einen vorhandenen Inhalt. Jede Berichtszeile schreibst du mit einem Zeilenende `"\n"`.
 
-`data/report.txt` ist ein Ergebnis des Skripts, keine Vorlage. Sie dürfen die Datei löschen. Der nächste Lauf schreibt sie neu.
+`data/report.txt` ist ein Ergebnis des Skripts, keine Vorlage, und du darfst die Datei löschen. Der nächste Lauf schreibt sie neu.
 
 ## Übung
 

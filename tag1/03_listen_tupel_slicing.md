@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie legen eine Messreihe in einer Liste ab, einen kurzen festen Datensatz in einem Tupel, und Sie schneiden mit einem Slice einen Abschnitt heraus.
+In dieser Einheit legst du eine Messreihe in einer Liste ab, einen kurzen festen Datensatz in einem Tupel, und du schneidest mit einem Slice einen Abschnitt heraus.
 
 ## Ablauf in Spyder
 
@@ -47,7 +47,7 @@ Ein Slice schreibt Start, Stopp und optional eine Schrittweite in eckige Klammer
 | `readings[-2:]` | die letzten zwei Werte |
 | `readings[::2]` | jeder zweite Wert |
 
-Ein Slice einer Liste ist eine neue Liste. Wenn Sie an diese neue Liste etwas anhängen, bleibt die ursprüngliche Liste unverändert. Das Skript zeigt das am Präfix.
+Ein Slice einer Liste ist eine neue Liste. Wenn du an diese neue Liste etwas anhängst, bleibt die ursprüngliche Liste unverändert. Das Skript zeigt das am Präfix.
 
 ## Übung
 

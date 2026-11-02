@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie ordnen einem Sensornamen eine Temperatur zu und bilden die Menge der vorkommenden Namen ohne Doppelte.
+In dieser Einheit ordnest du einem Sensornamen eine Temperatur zu und bildest die Menge der vorkommenden Namen ohne Doppelte.
 
 ## Ablauf in Spyder
 
@@ -24,17 +24,17 @@ readings["probe"] = 18.7
 readings["bath"]
 ```
 
-Schlüssel in diesem Kurs sind Texte. `sorted(readings)` liefert die Schlüssel als sortierte Liste. Die Sortierung brauchen Sie nur für eine stabile Anzeige: ein Dictionary garantiert Ihnen keine bestimmte Druckreihenfolge als Teil der Aufgabe.
+Schlüssel in diesem Kurs sind Texte. `sorted(readings)` liefert die Schlüssel als sortierte Liste. Die Sortierung brauchst du nur für eine stabile Anzeige: ein Dictionary garantiert dir keine bestimmte Druckreihenfolge als Teil der Aufgabe.
 
 `items()` liefert die Paare. Daraus wird in Einheit 07 wieder ein Dictionary.
 
-Ein Zugriff auf einen fehlenden Schlüssel bricht ab. Fragen Sie nur Schlüssel ab, die Sie eingetragen haben.
+Ein Zugriff auf einen fehlenden Schlüssel bricht ab. Frage nur Schlüssel ab, die du eingetragen hast.
 
 ## Set und Frozenset
 
 Ein Set enthält jeden Wert höchstens einmal. Aus `["bath", "room", "bath", "bath"]` wird die Menge mit `bath` und `room`. Die Menge hat keine Position. `"bath" in unique` prüft die Mitgliedschaft.
 
-Ein Frozenset ist eine Menge, die Sie danach nicht mehr ändern. Es hat kein `add`. Es eignet sich als festes Ergebnis, das der Aufrufer nicht versehentlich erweitert.
+Ein Frozenset ist eine Menge, die du danach nicht mehr änderst. Es hat kein `add`. Es eignet sich als festes Ergebnis, das der Aufrufer nicht versehentlich erweitert.
 
 Zwei Mengen mit denselben Elementen sind gleich, auch wenn die Elemente in unterschiedlicher Reihenfolge hineingekommen sind.
 

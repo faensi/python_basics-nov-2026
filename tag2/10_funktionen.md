@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie definieren eine Funktion, rufen sie auf und geben mit `return` einen Wert zurück. Sie wissen, dass eine Funktion ohne `return` das Objekt `None` liefert.
+In dieser Einheit definierst du eine Funktion, rufst sie auf und gibst mit `return` einen Wert zurück. Außerdem weißt du, dass eine Funktion ohne `return` das Objekt `None` liefert.
 
 ## Ablauf in Spyder
 
@@ -25,7 +25,7 @@ def announce(sensor):
 result = announce("bath")
 ```
 
-`announce` hat kein `return`. `result` ist deshalb `None`. Eine Berechnung, deren Ergebnis Sie weiterverwenden wollen, braucht `return`.
+`announce` hat kein `return`. `result` ist deshalb `None`. Eine Berechnung, deren Ergebnis du weiterverwenden willst, braucht `return`.
 
 Die mittlere Temperatur einer Reihe ist die Summe geteilt durch die Anzahl:
 
@@ -37,7 +37,7 @@ average = sum(readings) / len(readings)
 
 ## Übung
 
-Schreiben Sie `mean(values)` mit dieser Rechnung.
+Schreibe `mean(values)` mit dieser Rechnung.
 
 `check_mean()` erwartet `mean([20.0, 21.0, 22.0]) == 21.0`.
 

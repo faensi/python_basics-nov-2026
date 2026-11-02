@@ -24,4 +24,4 @@
 
 ## Nächster Tag
 
-Tag 3: Eingabe, formatierte Ausgabe, Dateien und Module. Beginnen Sie mit `tag3/12_eingabe_und_formatierung.md`.
+Tag 3: Eingabe, formatierte Ausgabe, Dateien und Module. Beginne mit `tag3/12_eingabe_und_formatierung.md`.

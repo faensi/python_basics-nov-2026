@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie bereinigen einen Sensortext mit String-Methoden. Sie sortieren eine Zahlenliste, ohne die ursprüngliche Liste zu verändern, und Sie erkennen den Unterschied zwischen `sorted` und `sort`.
+In dieser Einheit bereinigst du einen Sensortext mit String-Methoden, sortierst eine Zahlenliste, ohne die ursprüngliche Liste zu verändern, und erkennst den Unterschied zwischen `sorted` und `sort`.
 
 ## Ablauf in Spyder
 
@@ -30,16 +30,16 @@ Methoden lassen sich verketten: `label.strip().lower()`.
 
 ## `sorted` und `sort`
 
-`sorted(werte)` liefert eine neue, sortierte Liste. Die Liste, die Sie übergeben, bleibt wie sie ist.
+`sorted(werte)` liefert eine neue, sortierte Liste. Die Liste, die du übergibst, bleibt wie sie ist.
 
 `werte.sort()` sortiert an Ort und Stelle. Der Rückgabewert ist `None`, nicht die Liste. Wer `print(werte.sort())` schreibt, sieht `None` und hat die Liste trotzdem verändert. Das ist eine In-Place-Methode. Einheit 07 geht darauf noch einmal ein.
 
 ## Übung
 
 - `clean_label("  Bath-01  ")` liefert `"bath-01"`.
-- `sorted_copy([20.2, 19.8, 20.0])` liefert `[19.8, 20.0, 20.2]`. Die Liste, die Sie übergeben haben, bleibt `[20.2, 19.8, 20.0]`.
+- `sorted_copy([20.2, 19.8, 20.0])` liefert `[19.8, 20.0, 20.2]`. Die Liste, die du übergeben hast, bleibt `[20.2, 19.8, 20.0]`.
 
-Nutzen Sie `sorted`, nicht `sort`, wenn die Ausgangsliste erhalten bleiben soll.
+Nutze `sorted`, nicht `sort`, wenn die Ausgangsliste erhalten bleiben soll.
 
 ## Lösung
 

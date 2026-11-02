@@ -5,19 +5,19 @@
 
 ## Ziel
 
-Sie setzen einen Haltepunkt, starten den Debugger und lesen den falschen Zwischenwert im Variablenexplorer.
+In dieser Einheit setzt du einen Haltepunkt, startest den Debugger und liest den falschen Zwischenwert im Variablenexplorer.
 
 ## Ablauf
 
 1. Arbeitsverzeichnis: `this_course`.
-2. Lesen Sie die Funktion `mean_without_ends`, bevor Sie sie ändern.
-3. Setzen Sie einen Haltepunkt in die Zeile mit `return`. Klicken Sie links neben die Zeilennummer. Ein Haltepunkt markiert diese Zeile.
-4. Starten Sie über das Menü **Debug** den Eintrag **Debug**. Die Tastenkombination ist in vielen Spyder-Versionen Strg+F5 beziehungsweise Ctrl+F5.
-5. Gehen Sie mit **Step** einen Schritt. Im Variablenexplorer erscheint `chosen`.
-6. Vergleichen Sie `chosen` mit der Reihe. Beenden Sie den Lauf mit **Continue**.
-7. Korrigieren Sie den Slice, führen Sie die Datei mit F5 aus und rufen Sie `check_mean_without_ends()` auf.
+2. Lies die Funktion `mean_without_ends`, bevor du sie änderst.
+3. Setze einen Haltepunkt in die Zeile mit `return`. Klicke links neben die Zeilennummer. Ein Haltepunkt markiert diese Zeile.
+4. Starte über das Menü **Debug** den Eintrag **Debug**. Die Tastenkombination ist in vielen Spyder-Versionen Strg+F5 beziehungsweise Ctrl+F5.
+5. Geh mit **Step** einen Schritt. Im Variablenexplorer erscheint `chosen`.
+6. Vergleiche `chosen` mit der Reihe. Beende den Lauf mit **Continue**.
+7. Korrigiere den Slice, führe die Datei mit F5 aus und rufe `check_mean_without_ends()` auf.
 
-Wenn im Variablenexplorer noch Werte aus einem früheren Lauf stehen, starten Sie die IPython-Konsole neu und debuggen Sie erneut.
+Wenn im Variablenexplorer noch Werte aus einem früheren Lauf stehen, starte die IPython-Konsole neu und debugge erneut.
 
 ## Der Fehler
 

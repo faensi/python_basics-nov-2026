@@ -24,4 +24,4 @@
 
 ## Nächster Tag
 
-Tag 4: eine kurze Einführung in Klassen, danach Debugging und Tests. Beginnen Sie mit `tag4/16_klassen.md`.
+Tag 4: eine kurze Einführung in Klassen, danach Debugging und Tests. Beginne mit `tag4/16_klassen.md`.

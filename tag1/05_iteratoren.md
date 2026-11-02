@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie unterscheiden eine Folge, die man durchlaufen kann, von dem Iterator, der die Werte einzeln herausgibt.
+In dieser Einheit unterscheidest du eine Folge, die man durchlaufen kann, von dem Iterator, der die Werte einzeln herausgibt.
 
 ## Ablauf in Spyder
 
@@ -24,7 +24,7 @@ Dieselbe Liste kann mehrere Iteratoren haben. Jeder merkt sich seine eigene Posi
 
 ## Zusammenhang mit der for-Schleife
 
-Die Schleife von Tag 2 spricht dieses Protokoll für Sie:
+Die Schleife von Tag 2 spricht dieses Protokoll für dich:
 
 ```python
 for reading in readings:
@@ -35,7 +35,7 @@ Sie holt einen Iterator und ruft `next`, bis die Werte ausgehen. Das Skript zeig
 
 ## Übung
 
-`first_value([19.8, 20.1, 19.9])` soll `19.8` liefern. Holen Sie mit `iter` einen Iterator und mit genau einem `next` den ersten Wert. Gehen Sie die Liste nicht von Hand mit einem Index durch.
+`first_value([19.8, 20.1, 19.9])` soll `19.8` liefern. Hole mit `iter` einen Iterator und mit genau einem `next` den ersten Wert. Geh die Liste nicht von Hand mit einem Index durch.
 
 ## Lösung
 

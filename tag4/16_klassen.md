@@ -5,20 +5,20 @@
 
 ## Ziel
 
-Sie definieren eine Klasse mit Konstruktor und Methoden, erzeugen zwei Instanzen und halten deren Daten auseinander.
+In dieser Einheit definierst du eine Klasse mit Konstruktor und Methoden, erzeugst zwei Instanzen und hältst deren Daten auseinander.
 
 ## Ablauf in Spyder
 
 1. Arbeitsverzeichnis: `this_course`.
 2. Skript mit F5 ausführen.
-3. Ergänzen Sie die Methode `is_within`.
+3. Ergänze die Methode `is_within`.
 4. In der Konsole `check_is_within()` aufrufen.
 
 Das ist eine kurze Einführung. Vererbung, besondere Methodennamen und Entwurfsmuster gehören nicht zu diesem Kurs.
 
 ## Klasse und Instanz
 
-Am Tag 1 war `float` die Klasse der Temperaturzahl. `Reading` ist eine Klasse, die Sie selbst schreiben. Ein Aufruf `Reading("bath", 20.1)` erzeugt eine **Instanz**. `bath` und `room` im Skript sind zwei Instanzen. `type(bath).__name__` ist `"Reading"`.
+Am Tag 1 war `float` die Klasse der Temperaturzahl. `Reading` ist eine Klasse, die du selbst schreibst. Ein Aufruf `Reading("bath", 20.1)` erzeugt eine **Instanz**. `bath` und `room` im Skript sind zwei Instanzen. `type(bath).__name__` ist `"Reading"`.
 
 `__init__` richtet eine neue Instanz ein. `self` ist diese Instanz. `self.sensor` und `self.celsius` gehören zu ihr, nicht zur Klasse insgesamt.
 
@@ -38,7 +38,7 @@ Danach steht `bath.celsius` noch auf 20,1. Die Zuweisung hat nur `room` getroffe
 
 ## Übung
 
-`is_within(reference, tolerance)` steht auf der Klasse und gibt `True` zurück, wenn der Betrag der Abweichung höchstens die Toleranz ist. Nutzen Sie `self.deviation`.
+`is_within(reference, tolerance)` steht auf der Klasse und gibt `True` zurück, wenn der Betrag der Abweichung höchstens die Toleranz ist. Nutze `self.deviation`.
 
 | Aufruf | Ergebnis |
 | --- | --- |

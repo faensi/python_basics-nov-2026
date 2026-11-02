@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie unterscheiden Zahl, Text, Wahrheitswert und den leeren Wert `None`. Sie können einen Namen an einen Wert binden und denselben Namen später an einen anderen Wert binden.
+In dieser Einheit unterscheidest du Zahl, Text, Wahrheitswert und den leeren Wert `None` und kannst einen Namen an einen Wert binden und denselben Namen später an einen anderen Wert binden.
 
 ## Ablauf in Spyder
 
@@ -14,15 +14,15 @@ Sie unterscheiden Zahl, Text, Wahrheitswert und den leeren Wert `None`. Sie kön
 3. Funktion `describe` ergänzen.
 4. In der Konsole `check_describe()` aufrufen.
 
-Schauen Sie danach in den Variablenexplorer. Dort stehen die Namen aus dem Skript, sobald es gelaufen ist.
+Schau danach in den Variablenexplorer. Dort stehen die Namen aus dem Skript, sobald es gelaufen ist.
 
 ## Vier Begriffe
 
 Ein **Objekt** ist ein Wert im Speicher, zum Beispiel die Zahl 20,1 oder der Text `bath`.
 
-Der **Datentyp** sagt, was Sie mit dem Objekt tun dürfen. Eine Temperatur in Grad Celsius ist hier eine Gleitkommazahl, eine Anzahl eine ganze Zahl, ein Sensorname ein Text.
+Der **Datentyp** sagt, was du mit dem Objekt tun darfst. Eine Temperatur in Grad Celsius ist hier eine Gleitkommazahl, eine Anzahl eine ganze Zahl, ein Sensorname ein Text.
 
-Die **Klasse** ist das Bauteil, das solche Objekte erzeugt. `type(20.1)` liefert die Klasse `float`. Jeder Wert ist ein Objekt einer Klasse. Eigene Klassen schreiben Sie am Tag 4. Heute reichen die eingebauten Klassen.
+Die **Klasse** ist das Bauteil, das solche Objekte erzeugt. `type(20.1)` liefert die Klasse `float`. Jeder Wert ist ein Objekt einer Klasse. Eigene Klassen schreibst du am Tag 4. Heute reichen die eingebauten Klassen.
 
 Eine **Variable** ist ein Name, der auf ein Objekt zeigt. Der Name steht links, der Wert rechts:
 
@@ -49,7 +49,7 @@ earlier = celsius
 celsius = 21.0
 ```
 
-`earlier` zeigt weiter auf 20,1. Nur der Name `celsius` zeigt danach auf 21,0. Sie haben das erste Objekt nicht verändert, sondern einen Namen umgehängt.
+`earlier` zeigt weiter auf 20,1. Nur der Name `celsius` zeigt danach auf 21,0, und du hast das erste Objekt nicht verändert, sondern einen Namen umgehängt.
 
 Derselbe Name darf danach auf ein Objekt einer anderen Klasse zeigen. Das Skript bindet `value` erst an eine Zahl und dann an einen Text. In C oder Java wäre das eine andere, fest deklarierte Variable.
 

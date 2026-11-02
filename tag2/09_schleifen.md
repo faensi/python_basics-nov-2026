@@ -5,7 +5,7 @@
 
 ## Ziel
 
-Sie schreiben `while`- und `for`-Schleifen, eine Indexschleife analog zu C und C++, und Sie setzen `continue`, `break`, `else` und `pass` gezielt ein.
+In dieser Einheit schreibst du `while`- und `for`-Schleifen, eine Indexschleife analog zu C und C++, und setzt `continue`, `break`, `else` und `pass` gezielt ein.
 
 ## Ablauf in Spyder
 
@@ -16,13 +16,13 @@ Sie schreiben `while`- und `for`-Schleifen, eine Indexschleife analog zu C und C
 
 ## `while` und `for`
 
-`while` wiederholt, solange die Bedingung gilt. Sie müssen die Zählvariable selbst erhöhen, sonst endet die Schleife nicht.
+`while` wiederholt, solange die Bedingung gilt, und du musst die Zählvariable selbst erhöhen, sonst endet die Schleife nicht.
 
 `for reading in readings` geht die Werte der Reihe durch. Das ist die Schleife, die in Einheit 05 den Iterator benutzt hat.
 
 ## Indexschleife wie in C und C++
 
-In C schreiben Sie oft:
+In C schreibst du oft:
 
 ```c
 for (int index = 0; index < n; index++) {
@@ -37,7 +37,7 @@ for index in range(len(readings)):
     print(index, readings[index])
 ```
 
-Wenn Sie den Index nicht brauchen, ist `for reading in readings` die deutlichere Form.
+Wenn du den Index nicht brauchst, ist `for reading in readings` die deutlichere Form.
 
 ## `continue`, `break`, `else`, `pass`
 

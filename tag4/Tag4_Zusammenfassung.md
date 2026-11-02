@@ -11,7 +11,7 @@
 
 - Zwei Instanzen teilen ihre Attribute nicht, wenn die Werte auf `self` liegen.
 - Ein Debugger hilft bei einem falschen Ergebnis, nicht nur bei einem Abbruch.
-- Ein Test nennt das erwartete Ergebnis. Bei einem Fehlschlag ändern Sie zuerst die Funktion.
+- Ein Test nennt das erwartete Ergebnis. Bei einem Fehlschlag änderst du zuerst die Funktion.
 - `doctest` vergleicht die Textdarstellung, einschließlich Leerzeichen und Vorzeichen.
 - `unittest` sammelt benannte Testmethoden.
 
