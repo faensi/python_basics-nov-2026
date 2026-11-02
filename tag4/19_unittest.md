@@ -9,11 +9,11 @@ In dieser Einheit liest du einen Testfall, erkennst einen fehlgeschlagenen Vergl
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
 3. Lies zuerst die Beispielmeldung, dann die Klassen `MeanTests` und `ToleranceTests`.
 
-Im Terminal, aus dem Ordner `this_course`:
+Im Terminal, aus dem Ordner `python_basics-nov-2026`:
 
 ```bash
 python tag4/19_unittest.py

@@ -9,7 +9,7 @@ In dieser Einheit schreibst du eine Verzweigung mit `if`, `elif` und `else` und 
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
 3. `status` ergänzen.
 4. In der Konsole `check_status()` aufrufen.

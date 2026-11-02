@@ -9,10 +9,10 @@ In dieser Einheit formulierst du zu einer Funktion konkrete Beispiele und lässt
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen. Die Zeile `doctest: ... tests, 0 failures` meldet den Erfolg.
 3. Lies die Docstrings von `mean`, `format_deviation` und `within_tolerance`.
-4. Optional im Terminal, aus dem Ordner `this_course`:
+4. Optional im Terminal, aus dem Ordner `python_basics-nov-2026`:
 
 ```bash
 python -m doctest tag4/18_doctest.py

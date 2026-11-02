@@ -4,6 +4,6 @@ organisatorisches
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
-this_course/data/report.txt
 .spyproject/
 data/report.txt
+*beispiel.py

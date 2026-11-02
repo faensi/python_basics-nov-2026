@@ -9,7 +9,7 @@ In dieser Einheit liest du eine Eingabe als Text, wandelst sie in eine Zahl und 
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen. F5 fragt nichts ab.
 3. `format_line`, `format_line_method` und `parse_reading` ergänzen.
 4. In der Konsole `check_formatting()` aufrufen.

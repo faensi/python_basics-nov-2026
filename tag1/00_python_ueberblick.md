@@ -1,6 +1,6 @@
 # Python, Philosophie und Unterschied zu anderen Sprachen
 
-**Tag 1, Einheit 00**  
+**Tag 1, Einheit 00**
 **Skript:** `tag1/00_python_ueberblick.py`
 
 ## Ziel
@@ -9,11 +9,11 @@ In dieser Einheit kannst du ein kleines Python-Skript in Spyder starten und sage
 
 ## Ablauf in Spyder
 
-1. Setze das Arbeitsverzeichnis auf den Ordner `this_course`.
+1. Setze das Arbeitsverzeichnis auf den Ordner `python_basics-nov-2026`.
 2. Öffne das Skript und führe es mit F5 aus.
 3. Lies die Ausgabe in der IPython-Konsole.
-4. Ergänze die Funktion `temperature_span`.
-5. Rufe in der Konsole `check_temperature_span()` auf.
+4. Ergänze die Funktion `own_values`.
+5. Rufe in der Konsole `check_own_values()` auf.
 
 ## Was Python ausmacht
 
@@ -50,15 +50,24 @@ Außerdem entfällt die Deklaration der Variablen vor der ersten Nutzung, und du
 
 ## Übung
 
-Eine Temperaturspanne ist der Abstand zwischen dem höheren und dem niedrigeren Wert. Ergänze `temperature_span`. Für 21,5 und 19,5 Grad Celsius ist das Ergebnis 2,0.
+Lege in `own_values` drei eigene Variablen an und gib sie zurück.
+
+- `sensor` ist ein Text, zum Beispiel der Name eines Orts.
+- `celsius` ist eine Temperatur mit Nachkommastelle.
+- `count` ist eine Anzahl als ganze Zahl.
+
+Such dir die Werte selbst aus. Die Zahlen aus dem Skript musst du nicht übernehmen. Die `return`-Zeile gibt die drei Werte in dieser Reihenfolge zurück.
 
 ## Lösung
 
 ```python
-def solution_temperature_span(high, low):
-    return high - low
+def solution_own_values():
+    sensor = "hall"
+    celsius = 18.5
+    count = 4
+    return sensor, celsius, count
 ```
 
-Die Funktion steht am Ende des Skripts. `check_temperature_span()` vergleicht deine Fassung damit.
+`check_own_values()` prüft die drei Arten von Werten. Andere passende Werte sind ebenfalls richtig. Ein leerer Text zählt nicht.
 
 Weiter mit `tag1/01_ipython_notebook.ipynb`.

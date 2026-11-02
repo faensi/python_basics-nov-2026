@@ -1,30 +1,32 @@
 """Iterables and iterators.
 
 Run this file in Spyder with F5.
-Set the Spyder working directory to the this_course folder.
+Set the Spyder working directory to the python_basics-nov-2026 folder.
 The lesson and the exercise are in 05_iteratoren.md.
 """
 
 
-def first_value(values):
-    """Return the first value by asking an iterator once.
+def first_two(values):
+    """Return the first two values by asking an iterator twice.
 
     Exercise stub. The task is in the markdown file.
     """
     return None
 
 
-def solution_first_value(values):
-    """Return the first value by asking an iterator once."""
+def solution_first_two(values):
+    """Return the first two values by asking an iterator twice."""
     iterator = iter(values)
-    return next(iterator)
+    first = next(iterator)
+    second = next(iterator)
+    return first, second
 
 
-def check_first_value():
-    """Print ok when first_value matches the reference."""
-    sample = [19.8, 20.1, 19.9]
-    actual = first_value(sample)
-    expected = solution_first_value(sample)
+def check_first_two():
+    """Print ok when first_two matches the reference on a new series."""
+    sample = [18.2, 18.6, 19.0, 19.4]
+    actual = first_two(sample)
+    expected = solution_first_two(sample)
     if actual == expected:
         print("ok")
     else:

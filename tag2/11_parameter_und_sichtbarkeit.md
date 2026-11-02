@@ -9,7 +9,7 @@ In dieser Einheit rufst du eine Funktion mit Positions- und mit Schlüsselwortar
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
 3. `shift` ergänzen.
 4. In der Konsole `check_shift()` aufrufen.

@@ -1,12 +1,20 @@
 """Dictionaries, sets, and frozensets.
 
 Run this file in Spyder with F5.
-Set the Spyder working directory to the this_course folder.
+Set the Spyder working directory to the python_basics-nov-2026 folder.
 The lesson and the exercise are in 06_dictionaries_sets.md.
 """
 
 
-def unique_sensors(names):
+def own_map():
+    """Return your own reading dict and one value stored in it.
+
+    Exercise stub. The task is in the markdown file.
+    """
+    return None
+
+
+def places_once(names):
     """Return the distinct names as a frozenset.
 
     Exercise stub. The task is in the markdown file.
@@ -14,37 +22,53 @@ def unique_sensors(names):
     return None
 
 
-def lookup_reading(readings, sensor):
-    """Return the value stored for sensor.
+def solution_own_map():
+    """Return one valid reading dict and the value added last."""
+    readings = {"hall": 19.2, "lab": 22.0, "office": 21.1}
+    readings["store"] = 17.5
+    stored = readings["store"]
+    return readings, stored
 
-    Exercise stub. The task is in the markdown file.
-    """
-    return None
 
-
-def solution_unique_sensors(names):
+def solution_places_once(names):
     """Return the distinct names as a frozenset."""
     return frozenset(names)
 
 
-def solution_lookup_reading(readings, sensor):
-    """Return the value stored for sensor."""
-    return readings[sensor]
+def _own_map_ok(result):
+    """Return whether result is an own dict plus one of its values."""
+    lesson_names = {"bath", "room", "probe"}
+    if not isinstance(result, tuple) or len(result) != 2:
+        return False
+    readings, stored = result
+    if not isinstance(readings, dict) or len(readings) < 4:
+        return False
+    for key, value in readings.items():
+        if not isinstance(key, str) or key in lesson_names:
+            return False
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            return False
+    if isinstance(stored, bool) or not isinstance(stored, (int, float)):
+        return False
+    return stored in readings.values()
 
 
 def check_mappings():
-    """Print ok when both exercise functions match the reference."""
-    names = ["bath", "room", "bath"]
-    readings = {"bath": 20.1, "room": 21.5}
-    actual_names = unique_sensors(names)
-    expected_names = solution_unique_sensors(names)
-    actual_reading = lookup_reading(readings, "bath")
-    expected_reading = solution_lookup_reading(readings, "bath")
-    if actual_names == expected_names and actual_reading == expected_reading:
-        print("ok")
-    else:
+    """Print ok when the dict is your own and the names form a frozenset."""
+    actual_map = own_map()
+    if not _own_map_ok(actual_map):
+        print("expected your dict and one stored value; got", actual_map)
+        return
+    if not _own_map_ok(solution_own_map()):
+        print("solution does not match the task")
+        return
+    names = ["hall", "lab", "hall", "store"]
+    actual_names = places_once(names)
+    expected_names = solution_places_once(names)
+    if type(actual_names) is not frozenset or actual_names != expected_names:
         print("names expected", expected_names, "got", actual_names)
-        print("reading expected", expected_reading, "got", actual_reading)
+        return
+    print("ok")
 
 
 def main():

@@ -26,4 +26,4 @@
 
 Die vier Tage hängen an derselben kleinen Messsituation: eine Reihe von Temperaturen, ein Referenzwert, eine Toleranz. Listen und Schnitte, Schleifen und Funktionen, Dateien und das Modul `measurement`, zuletzt eine Klasse `Reading` und Tests dafür.
 
-Das Arbeitsverzeichnis bleibt `this_course`. Die Umgebung bleibt `python_grundlagen` in Spyder.
+Das Arbeitsverzeichnis bleibt `python_basics-nov-2026`. Die Umgebung bleibt `python_grundlagen` in Spyder.

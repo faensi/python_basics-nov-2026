@@ -1,7 +1,7 @@
 """input, percent formatting, and str.format.
 
 Run this file in Spyder with F5.
-Set the Spyder working directory to the this_course folder.
+Set the Spyder working directory to the python_basics-nov-2026 folder.
 The lesson and the exercise are in 12_eingabe_und_formatierung.md.
 
 demo_input waits for the keyboard. Call it from the IPython console.

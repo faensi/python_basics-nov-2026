@@ -1,7 +1,7 @@
 """Positional parameters, keyword parameters, and local versus global names.
 
 Run this file in Spyder with F5.
-Set the Spyder working directory to the this_course folder.
+Set the Spyder working directory to the python_basics-nov-2026 folder.
 The lesson and the exercise are in 11_parameter_und_sichtbarkeit.md.
 """
 

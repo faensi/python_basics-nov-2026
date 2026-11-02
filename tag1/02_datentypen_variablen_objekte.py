@@ -1,38 +1,66 @@
 """Types, classes, variables, and objects.
 
 Run this file in Spyder with F5.
-Set the Spyder working directory to the this_course folder.
+Set the Spyder working directory to the python_basics-nov-2026 folder.
 The lesson and the exercise are in 02_datentypen_variablen_objekte.md.
 """
 
 
-def describe(value):
-    """Return the type name of value.
+def own_binding():
+    """Return your own names, including one name bound to a new value.
 
     Exercise stub. The task is in the markdown file.
     """
     return None
 
 
-def solution_describe(value):
-    """Return the type name of value."""
-    return type(value).__name__
+def solution_own_binding():
+    """Return one valid set of names with celsius bound again."""
+    count = 5
+    celsius = 18.4
+    label = "hall"
+    valid = False
+    missing = None
+    earlier = celsius
+    celsius = 19.0
+    return label, count, earlier, celsius, valid, missing
 
 
-def check_describe():
-    """Print ok when describe matches the reference on five values."""
-    actual = [
-        describe(20.1),
-        describe(3),
-        describe("bath"),
-        describe(True),
-        describe(None),
-    ]
-    expected = ["float", "int", "str", "bool", "NoneType"]
-    if actual == expected:
-        print("ok")
-    else:
-        print("expected", expected, "got", actual)
+def _own_binding_ok(result):
+    """Return whether result follows the variable exercise."""
+    if not isinstance(result, tuple) or len(result) != 6:
+        return False
+    label, count, earlier, celsius, valid, missing = result
+    if not isinstance(label, str) or label.strip() == "" or label == "bath":
+        return False
+    if isinstance(count, bool) or not isinstance(count, int) or count == 3:
+        return False
+    if isinstance(earlier, bool) or not isinstance(earlier, float) or earlier == 20.1:
+        return False
+    if isinstance(celsius, bool) or not isinstance(celsius, float) or celsius == 20.1:
+        return False
+    if earlier == celsius:
+        return False
+    if not isinstance(valid, bool):
+        return False
+    if missing is not None:
+        return False
+    return True
+
+
+def check_own_binding():
+    """Print ok when own_binding defines the asked kinds of values."""
+    actual = own_binding()
+    if not _own_binding_ok(actual):
+        print(
+            "expected label, count, earlier, celsius, valid, missing; got",
+            actual,
+        )
+        return
+    if not _own_binding_ok(solution_own_binding()):
+        print("solution does not match the task")
+        return
+    print("ok")
 
 
 def main():

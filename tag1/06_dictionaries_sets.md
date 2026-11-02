@@ -9,9 +9,9 @@ In dieser Einheit ordnest du einem Sensornamen eine Temperatur zu und bildest di
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
-3. `unique_sensors` und `lookup_reading` ergänzen.
+3. `own_map` und `places_once` ergänzen.
 4. In der Konsole `check_mappings()` aufrufen.
 
 ## Dictionary
@@ -40,17 +40,23 @@ Zwei Mengen mit denselben Elementen sind gleich, auch wenn die Elemente in unter
 
 ## Übung
 
-- `unique_sensors(["bath", "room", "bath"])` liefert `frozenset({"bath", "room"})`.
-- `lookup_reading({"bath": 20.1, "room": 21.5}, "bath")` liefert `20.1`.
+Lege in `own_map` ein Dictionary mit mindestens drei Sensornamen und Temperaturen an. Die Namen `bath`, `room` und `probe` aus dem Text nimmst du nicht. Trag danach ein weiteres Paar ein, lies genau diesen neuen Wert wieder aus und gib das Dictionary und diesen Wert zurück.
+
+`places_once(["hall", "lab", "hall", "store"])` liefert `frozenset({"hall", "lab", "store"})`. Doppelte Namen fallen weg.
 
 ## Lösung
 
 ```python
-def solution_unique_sensors(names):
-    return frozenset(names)
+def solution_own_map():
+    readings = {"hall": 19.2, "lab": 22.0, "office": 21.1}
+    readings["store"] = 17.5
+    stored = readings["store"]
+    return readings, stored
 
-def solution_lookup_reading(readings, sensor):
-    return readings[sensor]
+def solution_places_once(names):
+    return frozenset(names)
 ```
+
+`check_mappings()` lässt andere Namen und Temperaturen zu, solange die Namen aus dem Text nicht vorkommen und der zurückgegebene Wert im Dictionary steht. Die Menge muss ein Frozenset sein.
 
 Weiter mit `tag1/07_konvertierung_referenzen_kopien.md`.

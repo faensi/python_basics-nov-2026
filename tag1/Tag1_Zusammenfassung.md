@@ -21,7 +21,7 @@
 
 ## Stichpunkte
 
-- Arbeitsverzeichnis ist `this_course`, auch wenn das Skript in `tag1` liegt.
+- Arbeitsverzeichnis ist `python_basics-nov-2026`, auch wenn das Skript in `tag1` liegt.
 - F5 führt die Datei aus, F9 eine Zeile.
 - Übungen stehen in den Funktionen ohne Vorsilbe `solution_`.
 - Die Prüfung rufst du in der Konsole auf, zum Beispiel `check_slices()`.

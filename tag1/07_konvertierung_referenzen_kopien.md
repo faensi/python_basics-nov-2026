@@ -9,9 +9,9 @@ In dieser Einheit wandelst du Werte zwischen Text, Zahl, Liste und Dictionary um
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
-3. `sorted_snapshot` und `independent_groups` ergänzen.
+3. `celsius_from_text`, `sorted_snapshot` und `independent_groups` ergänzen.
 4. In der Konsole `check_copies()` aufrufen.
 
 ## Umwandlung
@@ -65,12 +65,18 @@ Es ändert danach den ersten Temperaturwert auf 25,0 und hängt eine weitere Gru
 
 ## Übung
 
-- `sorted_snapshot([20.0, 19.0, 21.0])` liefert `[19.0, 20.0, 21.0]`. Die übergebene Liste bleibt unsortiert. Eine flache Kopie reicht.
-- `independent_groups` liefert eine tiefe Kopie. Wenn der Aufrufer danach eine Innentemperatur ändert, bleibt deine Kopie bei den alten Werten.
+`celsius_from_text("18.6")` liefert die Gleitkommazahl `18.6`. Im Text steht das Beispiel `float("20.5")`. Hier ist der Text ein anderer.
+
+`sorted_snapshot([22.0, 17.5, 19.5])` liefert `[17.5, 19.5, 22.0]`. Die übergebene Liste bleibt unsortiert. Kopiere sie flach und sortiere nur die Kopie.
+
+`independent_groups` liefert eine tiefe Kopie. Der Check übergibt `[["hall", 19.2], ["lab", 22.0]]` und ändert danach die erste Temperatur im Original. Deine Kopie bleibt bei 19,2 und 22,0.
 
 ## Lösung
 
 ```python
+def solution_celsius_from_text(text):
+    return float(text)
+
 def solution_sorted_snapshot(values):
     snapshot = copy.copy(values)
     snapshot.sort()

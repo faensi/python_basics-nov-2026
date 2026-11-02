@@ -12,7 +12,7 @@ Die Installation von Git und der Abruf des Kursordners über HTTPS stehen in `gi
 
 Die Paketliste steht in `environment.yml`. Der Name der Umgebung ist `python_grundlagen`, die Python-Version ist 3.13. Der Kanal ist conda-forge.
 
-Wechsle in diesen Ordner `this_course` und lege die Umgebung an:
+Wechsle in diesen Ordner `python_basics-nov-2026` und lege die Umgebung an:
 
 ```bash
 conda env create -f environment.yml
@@ -42,7 +42,7 @@ spyder
 
 Stelle den Interpreter auf diese Umgebung: **Tools**, **Preferences**, **Python interpreter**. Trage den Pfad ein, den der Befehl oben ausgegeben hat. Starte Spyder danach neu.
 
-Setze das Arbeitsverzeichnis auf diesen Ordner `this_course`. In Spyder steht der Ordner oben im Fenster und im Dateibaum. Daten lesen die Skripte als `data/readings.csv`, also vom Kursordner aus, nicht vom Tagesordner aus.
+Setze das Arbeitsverzeichnis auf diesen Ordner `python_basics-nov-2026`. In Spyder steht der Ordner oben im Fenster und im Dateibaum. Daten lesen die Skripte als `data/readings.csv`, also vom Kursordner aus, nicht vom Tagesordner aus.
 
 - **F5** führt die geöffnete Datei aus.
 - **F9** führt die markierte Zeile oder Auswahl in der IPython-Konsole aus.

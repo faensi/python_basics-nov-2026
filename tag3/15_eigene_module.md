@@ -10,7 +10,7 @@ In dieser Einheit lagerst du Funktionen in eine eigene Datei aus, importierst si
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Öffne zuerst `measurement.py`, dann das Skript der Einheit.
 3. Skript mit F5 ausführen.
 4. `summary` ergänzen.

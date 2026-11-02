@@ -9,9 +9,9 @@ In dieser Einheit bereinigst du einen Sensortext mit String-Methoden, sortierst 
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
-3. `clean_label` und `sorted_copy` ergänzen.
+3. `tidy_name` und `ordered_copy` ergänzen.
 4. In der Konsole `check_strings_and_sort()` aufrufen.
 
 ## Strings
@@ -36,18 +36,17 @@ Methoden lassen sich verketten: `label.strip().lower()`.
 
 ## Übung
 
-- `clean_label("  Bath-01  ")` liefert `"bath-01"`.
-- `sorted_copy([20.2, 19.8, 20.0])` liefert `[19.8, 20.0, 20.2]`. Die Liste, die du übergeben hast, bleibt `[20.2, 19.8, 20.0]`.
+`tidy_name("  Probe-7  ")` liefert `"probe_7"`. Entferne die Leerzeichen an den Enden, schreibe klein und ersetze den Bindestrich durch einen Unterstrich. Der Beispieltext `Bath-01` kommt hier nicht vor.
 
-Nutze `sorted`, nicht `sort`, wenn die Ausgangsliste erhalten bleiben soll.
+`ordered_copy([21.5, 18.0, 19.2])` liefert `[18.0, 19.2, 21.5]`. Die übergebene Liste bleibt `[21.5, 18.0, 19.2]`. Nutze `sorted`, nicht `sort`.
 
 ## Lösung
 
 ```python
-def solution_clean_label(label):
-    return label.strip().lower()
+def solution_tidy_name(label):
+    return label.strip().lower().replace("-", "_")
 
-def solution_sorted_copy(values):
+def solution_ordered_copy(values):
     return sorted(values)
 ```
 

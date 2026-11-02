@@ -1,7 +1,7 @@
 """Import a module that lives next to this script.
 
 Run this file in Spyder with F5.
-Set the Spyder working directory to the this_course folder.
+Set the Spyder working directory to the python_basics-nov-2026 folder.
 The lesson and the exercise are in 15_eigene_module.md.
 """
 

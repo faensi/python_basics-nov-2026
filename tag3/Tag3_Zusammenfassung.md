@@ -10,7 +10,7 @@
 ## Wichtige Konzepte
 
 - `input` liefert Text. Zahlen entstehen erst mit `float` oder `int`.
-- Pfade zu den Beispieldaten beginnen mit `data/` und gelten vom Ordner `this_course` aus.
+- Pfade zu den Beispieldaten beginnen mit `data/` und gelten vom Ordner `python_basics-nov-2026` aus.
 - `with` schließt die Datei.
 - Ein Modul ist eine Python-Datei. Der Dateiname ohne `.py` ist der Name im `import`.
 - Der Docstring steht im Programm auf Englisch. `help` zeigt ihn in der Konsole.

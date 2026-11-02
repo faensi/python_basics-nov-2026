@@ -1,49 +1,74 @@
 """Lists, tuples, and slicing.
 
 Run this file in Spyder with F5.
-Set the Spyder working directory to the this_course folder.
+Set the Spyder working directory to the python_basics-nov-2026 folder.
 The lesson and the exercise are in 03_listen_tupel_slicing.md.
 """
 
 
-def middle_readings(values):
-    """Return every value except the first and the last.
+def own_readings():
+    """Return your own list and a tuple of its first and last values.
 
     Exercise stub. The task is in the markdown file.
     """
     return None
 
 
-def last_three(values):
-    """Return the last three values.
+def second_and_third(values):
+    """Return the second and third values as a new list.
 
     Exercise stub. The task is in the markdown file.
     """
     return None
 
 
-def solution_middle_readings(values):
-    """Return every value except the first and the last."""
-    return values[1:-1]
+def solution_own_readings():
+    """Return one valid list and the tuple of its ends."""
+    readings = [18.0, 18.5, 17.9, 19.2]
+    readings.append(18.8)
+    ends = (readings[0], readings[-1])
+    return readings, ends
 
 
-def solution_last_three(values):
-    """Return the last three values."""
-    return values[-3:]
+def solution_second_and_third(values):
+    """Return the second and third values as a new list."""
+    return values[1:3]
+
+
+def _own_readings_ok(result):
+    """Return whether result is a long enough own list plus its ends."""
+    lesson = [19.8, 20.1, 19.9, 20.0, 20.2]
+    if not isinstance(result, tuple) or len(result) != 2:
+        return False
+    readings, ends = result
+    if not isinstance(readings, list) or len(readings) < 5:
+        return False
+    if readings[:5] == lesson:
+        return False
+    for item in readings:
+        if isinstance(item, bool) or not isinstance(item, (int, float)):
+            return False
+    if not isinstance(ends, tuple) or ends != (readings[0], readings[-1]):
+        return False
+    return True
 
 
 def check_slices():
-    """Print ok when both exercise functions match the reference."""
-    sample = [19.8, 20.1, 19.9, 20.0, 20.2]
-    actual_middle = middle_readings(sample)
-    expected_middle = solution_middle_readings(sample)
-    actual_tail = last_three(sample)
-    expected_tail = solution_last_three(sample)
-    if actual_middle == expected_middle and actual_tail == expected_tail:
-        print("ok")
-    else:
-        print("middle expected", expected_middle, "got", actual_middle)
-        print("last three expected", expected_tail, "got", actual_tail)
+    """Print ok when the list is your own and the slice matches."""
+    built = own_readings()
+    if not _own_readings_ok(built):
+        print("expected your list and a tuple of its ends; got", built)
+        return
+    if not _own_readings_ok(solution_own_readings()):
+        print("solution does not match the task")
+        return
+    sample = [18.0, 18.4, 19.1, 17.6]
+    actual = second_and_third(sample)
+    expected = solution_second_and_third(sample)
+    if actual != expected:
+        print("second and third expected", expected, "got", actual)
+        return
+    print("ok")
 
 
 def main():

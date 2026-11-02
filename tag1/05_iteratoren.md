@@ -9,10 +9,10 @@ In dieser Einheit unterscheidest du eine Folge, die man durchlaufen kann, von de
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
-3. `first_value` ergänzen.
-4. In der Konsole `check_first_value()` aufrufen.
+3. `first_two` ergänzen.
+4. In der Konsole `check_first_two()` aufrufen.
 
 ## Zwei Rollen
 
@@ -35,14 +35,18 @@ Sie holt einen Iterator und ruft `next`, bis die Werte ausgehen. Das Skript zeig
 
 ## Übung
 
-`first_value([19.8, 20.1, 19.9])` soll `19.8` liefern. Hole mit `iter` einen Iterator und mit genau einem `next` den ersten Wert. Geh die Liste nicht von Hand mit einem Index durch.
+`first_two([18.2, 18.6, 19.0, 19.4])` liefert `(18.2, 18.6)`.
+
+Hole mit `iter` einen Iterator. Lege zwei eigene Variablen an und hole mit `next` den ersten und den zweiten Wert. Gib beide als Tupel zurück. Geh die Liste nicht mit einem Index durch. Die Reihe im Skript, `19.8, 20.1, 19.9`, ist eine andere.
 
 ## Lösung
 
 ```python
-def solution_first_value(values):
+def solution_first_two(values):
     iterator = iter(values)
-    return next(iterator)
+    first = next(iterator)
+    second = next(iterator)
+    return first, second
 ```
 
 Weiter mit `tag1/06_dictionaries_sets.md`.

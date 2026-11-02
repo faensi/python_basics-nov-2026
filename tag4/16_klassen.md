@@ -9,7 +9,7 @@ In dieser Einheit definierst du eine Klasse mit Konstruktor und Methoden, erzeug
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
 3. Ergänze die Methode `is_within`.
 4. In der Konsole `check_is_within()` aufrufen.

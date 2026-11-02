@@ -9,7 +9,7 @@ In dieser Einheit setzt du einen Haltepunkt, startest den Debugger und liest den
 
 ## Ablauf
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Lies die Funktion `mean_without_ends`, bevor du sie änderst.
 3. Setze einen Haltepunkt in die Zeile mit `return`. Klicke links neben die Zeilennummer. Ein Haltepunkt markiert diese Zeile.
 4. Starte über das Menü **Debug** den Eintrag **Debug**. Die Tastenkombination ist in vielen Spyder-Versionen Strg+F5 beziehungsweise Ctrl+F5.

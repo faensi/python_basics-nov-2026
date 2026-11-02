@@ -9,7 +9,7 @@ In dieser Einheit bindest du Module der Standardbibliothek ein, unterscheidest d
 
 ## Ablauf in Spyder
 
-1. Arbeitsverzeichnis: `this_course`.
+1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
 3. `spread` ergänzen. Benutze `math.fabs`.
 4. In der Konsole `check_spread()` aufrufen.

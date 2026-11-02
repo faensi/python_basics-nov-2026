@@ -1,10 +1,10 @@
 """Systematic checks with the doctest module.
 
 Run this file in Spyder with F5.
-Set the Spyder working directory to the this_course folder.
+Set the Spyder working directory to the python_basics-nov-2026 folder.
 The lesson and the exercise are in 18_doctest.md.
 
-From this_course you can also run:
+From python_basics-nov-2026 you can also run:
 
     python -m doctest tag4/18_doctest.py
 """
