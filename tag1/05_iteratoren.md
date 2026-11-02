@@ -1,6 +1,7 @@
+
 # Iteratoren und iterierbare Objekte
 
-**Tag 1, Einheit 05**  
+**Tag 1, Einheit 05**
 **Skript:** `tag1/05_iteratoren.py`
 
 ## Ziel
@@ -27,6 +28,8 @@ Dieselbe Liste kann mehrere Iteratoren haben. Jeder merkt sich seine eigene Posi
 Die Schleife von Tag 2 spricht dieses Protokoll für dich:
 
 ```python
+readings=[1,2,3,5,6,7,8,1,3,6,8]
+
 for reading in readings:
     print(reading)
 ```

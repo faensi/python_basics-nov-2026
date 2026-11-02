@@ -36,9 +36,18 @@ Methoden lassen sich verketten: `label.strip().lower()`.
 
 ## Übung
 
-Aus `probe` machst du den Text `"probe_7"`. Entferne die Leerzeichen an den Enden, schreibe klein und ersetze den Bindestrich durch einen Unterstrich.
+Aus `probe` machst du den Text `"probe_7"`. 
+Entferne die Leerzeichen an den Enden, schreibe klein und ersetze den 
+Bindestrich durch einen Unterstrich.
 
-Aus `series` machst du eine neue sortierte Liste `[18.0, 19.2, 21.5]`. `series` bleibt `[21.5, 18.0, 19.2]`. Nutze `sorted`, nicht `sort`.
+Aus `series` machst du eine neue sortierte Liste `[18.0, 19.2, 21.5]`.
+`series` bleibt `[21.5, 18.0, 19.2]`. Nutze `sorted`, nicht `sort`.
+
+
+
+
+
+
 
 ## Lösung
 
