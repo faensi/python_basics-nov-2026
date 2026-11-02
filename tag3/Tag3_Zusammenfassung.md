@@ -19,9 +19,9 @@
 
 - Im Programm steht der Dezimalpunkt, zum Beispiel in `"bath: 20.1 C"`.
 - `newline=""` gehört zum Lesen mit `csv.DictReader`.
-- Eine Liste als Standardargument bleibt ein Fehler. Das Modul legt keine solche Liste an.
-- `check_formatting`, `check_files`, `check_spread` und `check_summary` prüfen die Übungen.
+- Eine Liste als Standardargument bleibt ein Fehler. Das hast du am Tag 2 gesehen. Das Modul legt keine solche Liste an.
+- Die Übungen sind Zeilen im Skript. Eine eigene Funktion brauchst du dafür nicht. Die Funktionen stehen in `measurement.py`.
 
 ## Nächster Tag
 
-Tag 4: eine kurze Einführung in Klassen, danach Debugging und Tests. Beginne mit `tag4/16_klassen.md`.
+Tag 4: eine kurze Einführung in Klassen, danach Debugging und Tests. Beginne mit `tag4/16_klassen.ipynb`.

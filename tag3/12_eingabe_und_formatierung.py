@@ -1,86 +1,76 @@
-"""input, percent formatting, and str.format.
+# Eingabe und formatierte Ausgabe
+#
+# Tag 3, Einheit 12
+# Skript: `tag3/12_eingabe_und_formatierung.py`
+#
+# Ziel
+#
+# Du liest eine Eingabe als Text, wandelst sie in eine Zahl und formatierst eine Zeile auf zwei Wegen: mit dem Prozentoperator und mit der Methode `format`.
+#
+# Arbeitsverzeichnis: `python_basics-nov-2026`. Skript mit F5, oder die Zellen von oben nach unten. F5 fragt nichts ab.
 
-Run this file in Spyder with F5.
-Set the Spyder working directory to the python_basics-nov-2026 folder.
-The lesson and the exercise are in 12_eingabe_und_formatierung.md.
+# `input`
+#
+# `input` liest eine Zeile von der Tastatur und gibt sie als String zurück. Die Frage erscheint in der IPython-Konsole, nicht im Editor. Wirkt das Programm angehalten, liegt der Fokus oft noch im Editor. Klicke in die Konsole und tippe den Wert dort.
+#
+# In Python 2 hieß die Funktion für eine Textzeile `raw_input`. In Python 3 heißt sie `input`. `raw_input` gibt es hier nicht.
+#
+# Die beiden Zeilen mit `input` stehen als Kommentar, damit F5 nicht auf die Tastatur wartet. Markiere sie in Spyder, nimm die Kommentarzeichen am Zeilenanfang weg und führe sie mit F9 aus. Im Notebook nimmst du die Kommentarzeichen weg und führst nur diese Zelle aus.
 
-demo_input waits for the keyboard. Call it from the IPython console.
-F5 does not call it.
-"""
+# text = input("Temperature in C: ")
+# number = float(text.strip())
+# print(number)
 
+# Zwei Formatierungen
+#
+# Dieselbe Zeile, eine Nachkommastelle:
+#
+#     "%s: %.1f C" % (sensor, celsius)
+#     "{}: {:.1f} C".format(sensor, celsius)
+#
+# `%s` und `{}` stehen für den Sensornamen, `%.1f` und `{:.1f}` für die Temperatur mit einer Nachkommastelle. Für den Sensor `bath` und 20,1 Grad Celsius entsteht der Text `bath: 20.1 C`.
+#
+# Im Python-Text bleibt der Punkt das Dezimalzeichen. Im deutschen Satz schreibst du das Komma.
+#
+# Eine neuere Schreibweise sind f-Strings, etwa `f"{sensor}: {celsius:.1f} C"`. Diese Einheit bleibt beim Prozentoperator und bei `format`.
 
-def format_line(sensor, celsius):
-    """Return a line such as 'bath: 20.0 C' using percent formatting.
+sensor = "bath"
+celsius = 20.1
+percent_line = "%s: %.1f C" % (sensor, celsius)
+format_line = "{}: {:.1f} C".format(sensor, celsius)
+print("percent:", percent_line)
+print("format:", format_line)
+print("same text:", percent_line == format_line)
 
-    Exercise stub. The task is in the markdown file.
-    """
-    return None
+# Übung
+#
+# Baue für den Sensor `bath` und die Temperatur 20,0 zwei gleiche Zeilen. Die eine entsteht mit dem Prozentoperator, die andere mit `format`. Beide Texte sind `bath: 20.0 C`.
+#
+# Aus dem Text ` 20.5 ` machst du die Zahl `20.5`. Entferne die äußeren Leerzeichen und rufe `float` auf.
 
+# gegeben:
+sensor = "bath"
+celsius = 20.0
+text = " 20.5 "
 
-def format_line_method(sensor, celsius):
-    """Return the same line using the format method.
+# lösung ab hier:
+percent_line =
+format_line =
+number =
+print("exercise", percent_line)
+print("exercise", format_line)
+print("exercise", number)
 
-    Exercise stub. The task is in the markdown file.
-    """
-    return None
+# Lösung
 
+sensor = "bath"
+celsius = 20.0
+percent_line = "%s: %.1f C" % (sensor, celsius)
+format_line = "{}: {:.1f} C".format(sensor, celsius)
+text = " 20.5 "
+number = float(text.strip())
+print("solution", percent_line)
+print("solution", format_line)
+print("solution", number)
 
-def parse_reading(text):
-    """Return the float stored in text.
-
-    Exercise stub. The task is in the markdown file.
-    """
-    return None
-
-
-def solution_format_line(sensor, celsius):
-    """Return a line such as 'bath: 20.0 C' using percent formatting."""
-    return "%s: %.1f C" % (sensor, celsius)
-
-
-def solution_format_line_method(sensor, celsius):
-    """Return the same line using the format method."""
-    return "{}: {:.1f} C".format(sensor, celsius)
-
-
-def solution_parse_reading(text):
-    """Return the float stored in text."""
-    return float(text.strip())
-
-
-def check_formatting():
-    """Print ok when both lines and the parsed number match."""
-    line = format_line("bath", 20.0)
-    method_line = format_line_method("bath", 20.0)
-    number = parse_reading(" 20.5 ")
-    lines_ok = line == solution_format_line("bath", 20.0)
-    method_ok = method_line == solution_format_line_method("bath", 20.0)
-    number_ok = number == solution_parse_reading(" 20.5 ")
-    if lines_ok and method_ok and number_ok:
-        print("ok")
-    else:
-        print("percent", line)
-        print("format", method_line)
-        print("number", number)
-
-
-def demo_input():
-    """Read one temperature from the IPython console and print it."""
-    text = input("Temperature in C: ")
-    print(solution_parse_reading(text))
-
-
-def main():
-    """Show percent formatting and the format method."""
-    sensor = "bath"
-    celsius = 20.1
-    percent_line = "%s: %.1f C" % (sensor, celsius)
-    format_line_text = "{}: {:.1f} C".format(sensor, celsius)
-    print("percent:", percent_line)
-    print("format:", format_line_text)
-    print("same text:", percent_line == format_line_text)
-    print("Call demo_input() in the console when you want to type a value.")
-
-
-if __name__ == "__main__":
-    main()
+# Weiter mit `tag3/13_dateien.ipynb`.

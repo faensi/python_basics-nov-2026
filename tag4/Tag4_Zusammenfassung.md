@@ -19,7 +19,7 @@
 
 - Kelvin aus Grad Celsius: zur Zahl 273,15 addieren.
 - Der fehlerhafte Slice `values[1:]` wirft den ersten Wert weg. `values[:-1]` wirft den letzten weg.
-- `check_is_within` und `check_mean_without_ends` prüfen die Übungen der Einheiten 16 und 17.
+- Die Lösung von Einheit 17 zeigt die korrigierte Rechnung unter einem zweiten Namen. Die Funktion mit dem Fehler bleibt, bis du den Slice änderst.
 - Die Einheiten 18 und 19 prüfen sich beim Ausführen selbst.
 
 ## Zum Schluss

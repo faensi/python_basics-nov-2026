@@ -17,11 +17,10 @@
 
 ## Stichpunkte
 
-- Der Mittelwert ist `sum(values) / len(values)`.
-- `raise ValueError` weist eine leere Reihe ab.
+- Der Mittelwert ist `sum(values) / len(values)`. Eine leere Liste hat die Anzahl 0.
 - `global` kommt im Beispiel vor. Für eigene Funktionen reicht meist ein Rückgabewert.
-- `check_status`, `check_count_until_above`, `check_mean` und `check_shift` prüfen die Übungen.
+- Die Übung der Einheiten 08 und 09 ist gerader Code. Funktionen schreibst du ab Einheit 10.
 
 ## Nächster Tag
 
-Tag 3: Eingabe, formatierte Ausgabe, Dateien und Module. Beginne mit `tag3/12_eingabe_und_formatierung.md`.
+Tag 3: Eingabe, formatierte Ausgabe, Dateien und Module. Beginne mit `tag3/12_eingabe_und_formatierung.ipynb`.

@@ -1,80 +1,77 @@
-"""Read and write text files.
+# Dateien lesen und schreiben
+#
+# Tag 3, Einheit 13
+# Skript: `tag3/13_dateien.py`
+#
+# Ziel
+#
+# Du liest das Probenprotokoll und die Messreihe aus `data/` und schreibst einen kurzen Bericht nach `data/report.txt`.
+#
+# Arbeitsverzeichnis: `python_basics-nov-2026`. Liegt es auf `tag3`, findet Python `data/readings.csv` nicht und meldet `FileNotFoundError`. Skript mit F5, oder die Zellen von oben nach unten.
 
-Run this file in Spyder with F5.
-Set the Spyder working directory to the python_basics-nov-2026 folder.
-The lesson and the exercise are in 13_dateien.md.
-"""
+# Lesen
+#
+# `open` öffnet eine Datei. `with` schließt sie wieder, auch wenn das Lesen abbricht. `encoding="utf-8"` legt die Zeichencodierung fest.
+#
+# `data/notes.txt` ist das Probenprotokoll. `data/readings.csv` beginnt mit einer Kopfzeile `timestamp,sensor,celsius`. Danach steht in jeder Zeile ein Zeitpunkt, ein Sensorname und eine Temperatur, getrennt durch Kommas. `split(",")` zerlegt eine Zeile. Die Kopfzeile überspringst du mit einem ersten `readline`. Die Temperatur im Text wandelst du mit `float` um.
 
+# Schreiben
+#
+# `"w"` legt die Datei neu an und ersetzt einen vorhandenen Inhalt. Jede Berichtszeile endet mit `"\n"`.
+#
+# `data/report.txt` ist ein Ergebnis, keine Vorlage. Du darfst die Datei löschen. Der nächste Lauf schreibt sie neu.
 
-def load_celsius(path, sensor):
-    """Return the Celsius values of one sensor from a CSV file.
+with open("data/notes.txt", encoding="utf-8") as handle:
+    notes = handle.read()
+print(notes)
+bath = []
+with open("data/readings.csv", encoding="utf-8") as handle:
+    handle.readline()
+    for line in handle:
+        if not line.strip():
+            continue
+        _timestamp, name, celsius = line.strip().split(",")
+        if name == "bath":
+            bath.append(float(celsius))
+print("bath", bath)
+lines = []
+for celsius in bath:
+    lines.append("bath: {:.1f} C".format(celsius))
+with open("data/report.txt", "w", encoding="utf-8") as handle:
+    for line in lines:
+        handle.write(line + "\n")
+print("wrote data/report.txt")
 
-    Exercise stub. The task is in the markdown file.
-    The first line of the file is a header.
-    """
-    return None
+# Übung
+#
+# Lies `data/readings.csv` noch einmal. Sammle die Temperaturen des Sensors `room` in der Liste `room`, in der Reihenfolge der Datei. Es sind fünf Werte, beginnend mit 21,4. Schreibe keine Funktion. Die Datei `data/report.txt` lässt du in dieser Übung unverändert.
 
+# gegeben:
+path = "data/readings.csv"
 
-def write_report(path, lines):
-    """Write each line plus a newline to path.
+# lösung ab hier:
+room =
+with open(path, encoding="utf-8") as handle:
+    handle.readline()
+    for line in handle:
+        if not line.strip():
+            continue
+        _timestamp, name, celsius = line.strip().split(",")
+        if name == "room":
+            room.append()
+print("exercise", room)
 
-    Exercise stub. The task is in the markdown file.
-    """
-    return None
+# Lösung
 
+room = []
+with open("data/readings.csv", encoding="utf-8") as handle:
+    handle.readline()
+    for line in handle:
+        if not line.strip():
+            continue
+        _timestamp, name, celsius = line.strip().split(",")
+        if name == "room":
+            room.append(float(celsius))
+print("solution", room)
 
-def solution_load_celsius(path, sensor):
-    """Return the Celsius values of one sensor from a CSV file."""
-    selected = []
-    with open(path, encoding="utf-8") as handle:
-        handle.readline()
-        for line in handle:
-            if not line.strip():
-                continue
-            _timestamp, name, celsius = line.strip().split(",")
-            if name == sensor:
-                selected.append(float(celsius))
-    return selected
-
-
-def solution_write_report(path, lines):
-    """Write each line plus a newline to path."""
-    with open(path, "w", encoding="utf-8") as handle:
-        for line in lines:
-            handle.write(line + "\n")
-
-
-def read_notes(path):
-    """Return the full text of a UTF-8 file."""
-    with open(path, encoding="utf-8") as handle:
-        return handle.read()
-
-
-def check_files():
-    """Print ok when the bath series and a small report match."""
-    loaded = load_celsius("data/readings.csv", "bath")
-    expected = solution_load_celsius("data/readings.csv", "bath")
-    write_report("data/report.txt", ["bath: 20.1 C"])
-    with open("data/report.txt", encoding="utf-8") as handle:
-        report = handle.read()
-    if loaded == expected and report == "bath: 20.1 C\n":
-        print("ok")
-    else:
-        print("loaded", loaded)
-        print("report", report)
-
-
-def main():
-    """Read the sample notes and write a short report for the bath sensor."""
-    print(read_notes("data/notes.txt"))
-    bath = solution_load_celsius("data/readings.csv", "bath")
-    lines = []
-    for celsius in bath:
-        lines.append("bath: {:.1f} C".format(celsius))
-    solution_write_report("data/report.txt", lines)
-    print("wrote data/report.txt")
-    print(read_notes("data/report.txt"))
-
-
-if __name__ == "__main__":
-    main()
+# Weiter mit `tag3/14_module_und_namensraeume.ipynb`.

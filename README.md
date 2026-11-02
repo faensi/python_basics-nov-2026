@@ -53,11 +53,11 @@ Eine Eingabe mit `input` erscheint in der IPython-Konsole. Klicke in die Konsole
 
 ## Wie eine Einheit aufgebaut ist
 
-Jede Einheit hat eine Markdown-Datei und ein Python-Skript mit demselben Namen. Die Erklärung und die Aufgabe stehen auf Deutsch in der Markdown-Datei. Das Skript ist auf Englisch: Namen, Kommentare und Docstrings folgen der üblichen Programmiersprache.
+Jede Einheit gibt es zweimal, mit demselben Namen: als Notebook und als Python-Skript. Die Erklärung steht auf Deutsch. Im Notebook sind das Textzellen, im Skript dieselben Abschnitte als Kommentarzeilen. Namen, Docstrings und die kurzen Hinweise direkt am Code bleiben Englisch.
 
-Führe das Skript mit F5 aus. Die Beispiele laufen dabei. Am Tag 1 schreibst du die Übung als Zeilen ans Ende des Skripts. Die Lösung ist der kurze Code in der Markdown-Datei. Ab Tag 2 sind die Übungen Funktionen ohne Vorsilbe und geben am Anfang `None` zurück. Funktionen mit der Vorsilbe `solution_` sind die Lösung. In der Konsole prüfst du deine Fassung mit `check_...`.
+Die Übung steht vor der Lösung. `# gegeben:` markiert die Vorgaben, `# lösung ab hier:` die Lücken. Die Übung ist so noch kein fertiges Programm. Die Lösung darunter ist für sich ausführbar. Im Notebook startest du dafür nur die Lösungszelle. Funktionen kommen erst dort vor, wo die Einheit Funktionen, Module, Klassen oder Tests behandelt.
 
-Die Einheit zum Notebook ist die Ausnahme: `tag1/01_ipython_notebook.ipynb`. Wenn deine Spyder-Version diese Datei nicht öffnet, starte aus derselben Umgebung `jupyter notebook` und öffne nur diese eine Datei. Die übrigen Einheiten bleiben Skripte in Spyder.
+In Spyder öffnest du das Skript und startest es mit F5. Das Notebook öffnest du, wenn du die Textzellen sehen willst. Wenn Spyder die Notebook-Datei nicht öffnet, starte aus derselben Umgebung `jupyter notebook`.
 
 ## Ablauf
 

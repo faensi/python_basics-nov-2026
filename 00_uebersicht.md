@@ -1,8 +1,8 @@
 # Kursübersicht
 
-Vier Tage, ein Arbeitsverzeichnis: der Ordner `python_basics-nov-2026`. Die Skripte liegen in `tag1` bis `tag4`. Daten liegen in `data/`.
+Vier Tage, ein Arbeitsverzeichnis: der Ordner `python_basics-nov-2026`. Die Einheiten liegen in `tag1` bis `tag4`. Daten liegen in `data/`.
 
-Die Nummern laufen über die Tage durch. Öffne zu jeder Nummer zuerst die Markdown-Datei, dann das Skript.
+Die Nummern laufen über die Tage durch. Jede Einheit gibt es zweimal: als Notebook `.ipynb` und als Skript `.py` mit demselben Namen. Im Notebook steht die Erklärung in Textzellen. Im Skript steht dieselbe Erklärung als Kommentar. Die Übung steht vor der Lösung.
 
 ## Tag 1: Überblick und Datenstrukturen
 
@@ -62,9 +62,8 @@ Einheit 13 schreibt zusätzlich `data/report.txt`. Diese Datei ist ein Ergebnis,
 
 ## Arbeitsweise
 
-1. Arbeitsverzeichnis auf python_basics-nov-2026 setzen.
-2. Markdown-Datei der Einheit lesen.
-3. Skript mit F5 ausführen.
-4. Übung am Ende des Skripts ergänzen und mit F5 erneut ausführen.
-5. Am Tag 1 steht die Lösung als kurzer Code in der Markdown-Datei.
-6. Ab Tag 2 prüfst du mit `check_...()` und vergleichst mit `solution_...`.
+1. Arbeitsverzeichnis auf `python_basics-nov-2026` setzen.
+2. Notebook der Einheit öffnen, oder das Skript mit demselben Namen.
+3. Die Beispielzellen von oben nach unten ausführen. In Spyder die Beispiele mit F5 starten, sobald die Lücken in der Übung geschlossen sind.
+4. Die Übung steht vor der Lösung. `# gegeben:` markiert die Vorgaben. Ab `# lösung ab hier:` schreibst du. Die Lücken sind absichtlich kein fertiges Programm.
+5. Die Lösung am Ende ist für sich ausführbar. Im Notebook startest du dafür nur diese Zelle.

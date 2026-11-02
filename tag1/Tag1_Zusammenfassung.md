@@ -3,7 +3,7 @@
 ## Behandelte Themen
 
 1. **Python im Überblick** (Einheit 00). Interpretierte Ausführung, Einrückung statt Klammern, Zen of Python.
-2. **IPython und Notebook** (Einheit 01). Konsole in Spyder, Zellen und Kernel, einmalig ein Notebook.
+2. **IPython und Notebook** (Einheit 01). Konsole in Spyder, Zellen und Kernel. Jede Einheit liegt als Notebook und als Skript vor.
 3. **Datentypen, Klassen, Variablen, Objekte** (Einheit 02). `int`, `float`, `str`, `bool`, `None`, Namen neu binden.
 4. **Listen, Tupel, Slicing** (Einheit 03). Index ab 0, festes Tupel, Schnitte mit weggelassenen Grenzen.
 5. **Strings und Sortierung** (Einheit 04). `strip`, `lower`, `split`, `replace`, `startswith`, `sorted` gegen `sort`.
@@ -23,9 +23,9 @@
 
 - Arbeitsverzeichnis ist `python_basics-nov-2026`, auch wenn das Skript in `tag1` liegt.
 - F5 führt die Datei aus, F9 eine Zeile.
-- Die Übung steht als Zeilen am Ende des Skripts.
-- Die Lösung steht in der Markdown-Datei unter der Überschrift Lösung.
+- Die Übung steht vor der Lösung, im Notebook und im Skript.
+- Ein Lauf zeigt zuerst das Übungsbeispiel und danach die Lösung.
 
 ## Nächster Tag
 
-Tag 2: Verzweigungen, Schleifen und Funktionen. Beginne mit `tag2/08_verzweigungen.md`.
+Tag 2: Verzweigungen, Schleifen und Funktionen. Beginne mit `tag2/08_verzweigungen.ipynb`.

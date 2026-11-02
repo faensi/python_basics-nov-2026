@@ -1,9 +1,21 @@
-"""Iterables and iterators.
+# Iteratoren und iterierbare Objekte
+#
+# Tag 1, Einheit 05
+# Skript: `tag1/05_iteratoren.py`
+#
+# Ziel
+#
+# Du unterscheidest eine Folge, die man durchlaufen kann, von dem Iterator, der die Werte einzeln herausgibt.
+#
+# Arbeitsverzeichnis: `python_basics-nov-2026`. Skript mit F5, oder die Zellen von oben nach unten.
 
-Run this file in Spyder with F5.
-Set the Spyder working directory to the python_basics-nov-2026 folder.
-The lesson and the exercise are in 05_iteratoren.md.
-"""
+# Zwei Rollen
+#
+# Eine Liste ist iterierbar. Man kann sie durchlaufen. Sie ist selbst nicht der Zähler, der die Werte nacheinander aushändigt.
+#
+# `iter(werte)` erzeugt einen Iterator. `next(iterator)` liefert den nächsten Wert. Nach dem letzten Wert ist der Iterator erschöpft. Ein weiterer Aufruf von `next` endet dann mit `StopIteration`. Die nächste Zelle ruft `next` nur so oft auf, wie Werte da sind.
+#
+# Dieselbe Liste kann mehrere Iteratoren haben. Jeder merkt sich seine eigene Position. Die Liste bleibt davon unberührt.
 
 readings = [19.8, 20.1, 19.9]
 print("list is iterable", hasattr(readings, "__iter__"))
@@ -13,11 +25,32 @@ print("next", next(iterator))
 print("next", next(iterator))
 print("next", next(iterator))
 
-# A for-loop asks for an iterator and then for the next value.
-# The loop syntax itself is taught on day 2.
+# Zusammenhang mit der for-Schleife
+#
+# Die Schleife von Tag 2 spricht dieses Protokoll für dich. Sie holt einen Iterator und ruft `next`, bis die Werte ausgehen. Die nächste Zelle zeigt die Schleife einmal, damit der Zusammenhang sichtbar ist. Die Formen `while`, `break` und `continue` kommen in Einheit 09.
+
 print("via for:")
 for reading in readings:
     print(reading)
 
-# Exercise: take the first two values of series with iter and next.
+# Übung
+#
+# Hole aus `series` den ersten und den zweiten Wert. Lege mit `iter` einen Iterator an und hole die beiden Werte mit `next` in `first` und `second`. Geh die Liste nicht mit einem Index durch. Das Ergebnis ist `18.2` und `18.6`.
+
+# gegeben:
 series = [18.2, 18.6, 19.0, 19.4]
+
+# lösung ab hier:
+first =
+second =
+print("exercise", first, second)
+
+# Lösung
+
+series = [18.2, 18.6, 19.0, 19.4]
+iterator = iter(series)
+first = next(iterator)
+second = next(iterator)
+print("solution", first, second)
+
+# Weiter mit `tag1/06_dictionaries_sets.ipynb`.
