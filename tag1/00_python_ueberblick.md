@@ -12,8 +12,8 @@ In dieser Einheit kannst du ein kleines Python-Skript in Spyder starten und sage
 1. Setze das Arbeitsverzeichnis auf den Ordner `python_basics-nov-2026`.
 2. Öffne das Skript und führe es mit F5 aus.
 3. Lies die Ausgabe in der IPython-Konsole.
-4. Ergänze die Funktion `own_values`.
-5. Rufe in der Konsole `check_own_values()` auf.
+4. Ergänze die Übung am Ende des Skripts.
+5. Führe das Skript erneut mit F5 aus.
 
 ## Was Python ausmacht
 
@@ -50,24 +50,21 @@ Außerdem entfällt die Deklaration der Variablen vor der ersten Nutzung, und du
 
 ## Übung
 
-Lege in `own_values` drei eigene Variablen an und gib sie zurück.
+Schreibe am Ende des Skripts drei eigene Variablen und gib sie aus.
 
 - `sensor` ist ein Text, zum Beispiel der Name eines Orts.
 - `celsius` ist eine Temperatur mit Nachkommastelle.
 - `count` ist eine Anzahl als ganze Zahl.
 
-Such dir die Werte selbst aus. Die Zahlen aus dem Skript musst du nicht übernehmen. Die `return`-Zeile gibt die drei Werte in dieser Reihenfolge zurück.
+Such dir die Werte selbst aus.
 
 ## Lösung
 
 ```python
-def solution_own_values():
-    sensor = "hall"
-    celsius = 18.5
-    count = 4
-    return sensor, celsius, count
+sensor = "hall"
+celsius = 18.5
+count = 4
+print(sensor, celsius, count)
 ```
-
-`check_own_values()` prüft die drei Arten von Werten. Andere passende Werte sind ebenfalls richtig. Ein leerer Text zählt nicht.
 
 Weiter mit `tag1/01_ipython_notebook.ipynb`.

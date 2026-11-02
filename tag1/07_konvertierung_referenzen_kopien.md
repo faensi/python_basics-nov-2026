@@ -11,8 +11,8 @@ In dieser Einheit wandelst du Werte zwischen Text, Zahl, Liste und Dictionary um
 
 1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
-3. `celsius_from_text`, `sorted_snapshot` und `independent_groups` ergänzen.
-4. In der Konsole `check_copies()` aufrufen.
+3. Übung am Ende des Skripts ergänzen.
+4. Skript erneut mit F5 ausführen.
 
 ## Umwandlung
 
@@ -65,25 +65,22 @@ Es ändert danach den ersten Temperaturwert auf 25,0 und hängt eine weitere Gru
 
 ## Übung
 
-`celsius_from_text("18.6")` liefert die Gleitkommazahl `18.6`. Im Text steht das Beispiel `float("20.5")`. Hier ist der Text ein anderer.
+Mach aus `text_celsius` die Gleitkommazahl `18.6`.
 
-`sorted_snapshot([22.0, 17.5, 19.5])` liefert `[17.5, 19.5, 22.0]`. Die übergebene Liste bleibt unsortiert. Kopiere sie flach und sortiere nur die Kopie.
+Kopiere `numbers` flach und sortiere nur die Kopie. `numbers` bleibt `[22.0, 17.5, 19.5]`. Die Kopie ist `[17.5, 19.5, 22.0]`.
 
-`independent_groups` liefert eine tiefe Kopie. Der Check übergibt `[["hall", 19.2], ["lab", 22.0]]` und ändert danach die erste Temperatur im Original. Deine Kopie bleibt bei 19,2 und 22,0.
+Lege von `log` eine tiefe Kopie an.
 
 ## Lösung
 
 ```python
-def solution_celsius_from_text(text):
-    return float(text)
-
-def solution_sorted_snapshot(values):
-    snapshot = copy.copy(values)
-    snapshot.sort()
-    return snapshot
-
-def solution_independent_groups(groups):
-    return copy.deepcopy(groups)
+celsius = float(text_celsius)
+snapshot = copy.copy(numbers)
+snapshot.sort()
+independent = copy.deepcopy(log)
+print(celsius)
+print(snapshot, numbers)
+print(independent)
 ```
 
 Weiter mit `tag2/08_verzweigungen.md`. Die Zusammenfassung des Tages steht in `Tag1_Zusammenfassung.md`.

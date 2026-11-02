@@ -11,8 +11,8 @@ In dieser Einheit unterscheidest du Zahl, Text, Wahrheitswert und den leeren Wer
 
 1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
-3. Funktion `own_binding` ergänzen.
-4. In der Konsole `check_own_binding()` aufrufen.
+3. Übung am Ende des Skripts ergänzen.
+4. Skript erneut mit F5 ausführen.
 
 Schau danach in den Variablenexplorer. Dort stehen die Namen aus dem Skript, sobald es gelaufen ist.
 
@@ -55,7 +55,7 @@ Derselbe Name darf danach auf ein Objekt einer anderen Klasse zeigen. Das Skript
 
 ## Übung
 
-Lege in `own_binding` eigene Namen an. Die Werte aus dem Skript, also `3`, `20.1` und `"bath"`, übernimmst du nicht.
+Schreibe am Ende des Skripts eigene Namen. Die Werte aus dem Skript, also `3`, `20.1` und `"bath"`, übernimmst du nicht.
 
 - `count` ist eine ganze Zahl, aber nicht 3.
 - `celsius` ist eine Temperatur mit Nachkommastelle, aber nicht 20,1.
@@ -63,24 +63,19 @@ Lege in `own_binding` eigene Namen an. Die Werte aus dem Skript, also `3`, `20.1
 - `valid` ist ein Wahrheitswert, also `True` oder `False`.
 - `missing` ist der leere Wert `None`.
 
-Merke dir danach die Temperatur unter dem Namen `earlier` und hänge `celsius` auf eine andere Temperatur um. Die beiden Temperaturen sind verschieden.
-
-Gib in dieser Reihenfolge zurück: `label`, `count`, `earlier`, `celsius`, `valid`, `missing`.
+Merke dir danach die Temperatur unter dem Namen `earlier` und hänge `celsius` auf eine andere Temperatur um. Gib die Namen aus.
 
 ## Lösung
 
 ```python
-def solution_own_binding():
-    count = 5
-    celsius = 18.4
-    label = "hall"
-    valid = False
-    missing = None
-    earlier = celsius
-    celsius = 19.0
-    return label, count, earlier, celsius, valid, missing
+count = 5
+celsius = 18.4
+label = "hall"
+valid = False
+missing = None
+earlier = celsius
+celsius = 19.0
+print(label, count, earlier, celsius, valid, missing)
 ```
-
-`check_own_binding()` prüft die Arten der Werte und dass die beiden Temperaturen verschieden sind. Andere passende Werte sind ebenfalls richtig.
 
 Weiter mit `tag1/03_listen_tupel_slicing.md`.

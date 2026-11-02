@@ -65,6 +65,6 @@ Einheit 13 schreibt zusätzlich `data/report.txt`. Diese Datei ist ein Ergebnis,
 1. Arbeitsverzeichnis auf python_basics-nov-2026 setzen.
 2. Markdown-Datei der Einheit lesen.
 3. Skript mit F5 ausführen.
-4. Übung im Skript ergänzen.
-5. `check_...()` in der IPython-Konsole aufrufen.
-6. Lösung mit der Funktion `solution_...` am Ende des Skripts vergleichen.
+4. Übung am Ende des Skripts ergänzen und mit F5 erneut ausführen.
+5. Am Tag 1 steht die Lösung als kurzer Code in der Markdown-Datei.
+6. Ab Tag 2 prüfst du mit `check_...()` und vergleichst mit `solution_...`.

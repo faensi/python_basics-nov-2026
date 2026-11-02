@@ -11,8 +11,8 @@ In dieser Einheit ordnest du einem Sensornamen eine Temperatur zu und bildest di
 
 1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
-3. `own_map` und `places_once` ergänzen.
-4. In der Konsole `check_mappings()` aufrufen.
+3. Übung am Ende des Skripts ergänzen.
+4. Skript erneut mit F5 ausführen.
 
 ## Dictionary
 
@@ -40,23 +40,19 @@ Zwei Mengen mit denselben Elementen sind gleich, auch wenn die Elemente in unter
 
 ## Übung
 
-Lege in `own_map` ein Dictionary mit mindestens drei Sensornamen und Temperaturen an. Die Namen `bath`, `room` und `probe` aus dem Text nimmst du nicht. Trag danach ein weiteres Paar ein, lies genau diesen neuen Wert wieder aus und gib das Dictionary und diesen Wert zurück.
+Lege ein Dictionary mit mindestens drei Sensornamen und Temperaturen an. Die Namen `bath`, `room` und `probe` aus dem Text nimmst du nicht. Trag danach ein weiteres Paar ein und lies diesen neuen Wert wieder aus.
 
-`places_once(["hall", "lab", "hall", "store"])` liefert `frozenset({"hall", "lab", "store"})`. Doppelte Namen fallen weg.
+Aus `places` machst du ein Frozenset. Doppelte Namen fallen weg. Das Ergebnis enthält `hall`, `lab` und `store`.
 
 ## Lösung
 
 ```python
-def solution_own_map():
-    readings = {"hall": 19.2, "lab": 22.0, "office": 21.1}
-    readings["store"] = 17.5
-    stored = readings["store"]
-    return readings, stored
-
-def solution_places_once(names):
-    return frozenset(names)
+own = {"hall": 19.2, "lab": 22.0, "office": 21.1}
+own["store"] = 17.5
+stored = own["store"]
+once = frozenset(places)
+print(own, stored)
+print(once)
 ```
-
-`check_mappings()` lässt andere Namen und Temperaturen zu, solange die Namen aus dem Text nicht vorkommen und der zurückgegebene Wert im Dictionary steht. Die Menge muss ein Frozenset sein.
 
 Weiter mit `tag1/07_konvertierung_referenzen_kopien.md`.

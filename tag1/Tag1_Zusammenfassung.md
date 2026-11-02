@@ -23,8 +23,8 @@
 
 - Arbeitsverzeichnis ist `python_basics-nov-2026`, auch wenn das Skript in `tag1` liegt.
 - F5 führt die Datei aus, F9 eine Zeile.
-- Übungen stehen in den Funktionen ohne Vorsilbe `solution_`.
-- Die Prüfung rufst du in der Konsole auf, zum Beispiel `check_slices()`.
+- Die Übung steht als Zeilen am Ende des Skripts.
+- Die Lösung steht in der Markdown-Datei unter der Überschrift Lösung.
 
 ## Nächster Tag
 

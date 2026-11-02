@@ -11,8 +11,8 @@ In dieser Einheit bereinigst du einen Sensortext mit String-Methoden, sortierst 
 
 1. Arbeitsverzeichnis: `python_basics-nov-2026`.
 2. Skript mit F5 ausführen.
-3. `tidy_name` und `ordered_copy` ergänzen.
-4. In der Konsole `check_strings_and_sort()` aufrufen.
+3. Übung am Ende des Skripts ergänzen.
+4. Skript erneut mit F5 ausführen.
 
 ## Strings
 
@@ -36,18 +36,17 @@ Methoden lassen sich verketten: `label.strip().lower()`.
 
 ## Übung
 
-`tidy_name("  Probe-7  ")` liefert `"probe_7"`. Entferne die Leerzeichen an den Enden, schreibe klein und ersetze den Bindestrich durch einen Unterstrich. Der Beispieltext `Bath-01` kommt hier nicht vor.
+Aus `probe` machst du den Text `"probe_7"`. Entferne die Leerzeichen an den Enden, schreibe klein und ersetze den Bindestrich durch einen Unterstrich.
 
-`ordered_copy([21.5, 18.0, 19.2])` liefert `[18.0, 19.2, 21.5]`. Die übergebene Liste bleibt `[21.5, 18.0, 19.2]`. Nutze `sorted`, nicht `sort`.
+Aus `series` machst du eine neue sortierte Liste `[18.0, 19.2, 21.5]`. `series` bleibt `[21.5, 18.0, 19.2]`. Nutze `sorted`, nicht `sort`.
 
 ## Lösung
 
 ```python
-def solution_tidy_name(label):
-    return label.strip().lower().replace("-", "_")
-
-def solution_ordered_copy(values):
-    return sorted(values)
+tidy = probe.strip().lower().replace("-", "_")
+ordered = sorted(series)
+print(tidy)
+print(ordered, series)
 ```
 
 Weiter mit `tag1/05_iteratoren.md`.
