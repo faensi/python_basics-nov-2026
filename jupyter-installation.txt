@@ -1,0 +1,62 @@
+Jupyter und die Notebook-Ansicht in Spyder
+
+Alles hier läuft in der normalen Miniforge Prompt, nicht als Administrator.
+Die Prompt startet in deinem Benutzerordner. Documents ist von dort aus der relative Pfad.
+
+
+1. Öffne die Miniforge Prompt. Nicht "Als Administrator ausführen".
+
+2. Wechsle in den Kursordner:
+
+    cd Documents\Python-Seminar\python_basics-nov-2026
+
+3. Lege die Umgebung an. Damit kommen Python 3.13, Spyder, Jupyter, Notebook und der Kernel:
+
+    conda env create -f environment.yml
+
+   Gibt es python_grundlagen schon, nimm stattdessen:
+
+    conda env update -n python_grundlagen -f environment.yml --prune
+
+4. Aktiviere sie:
+
+    conda activate python_grundlagen
+
+5. Installiere die Notebook-Ansicht für Spyder in dieselbe Umgebung. Der Kanal ist conda-forge. Nicht pip:
+
+    conda install -c conda-forge spyder-notebook
+
+   Die passende Plugin-Fassung 0.7.1 verlangt Spyder 6.1 und Notebook 7.4. Conda setzt die Versionen dafür. Eine Meldung, dass Spyder dabei auf 6.1 bleibt, ist in Ordnung.
+
+6. Registriere den Kernel für Jupyter im Benutzerprofil. Dafür sind keine Administratorrechte nötig:
+
+    python -m ipykernel install --user --name python_grundlagen --display-name "Python Grundlagen"
+
+7. Prüfe Jupyter im Browser. Der Befehl bleibt in diesem Fenster. Beende ihn mit Strg+C:
+
+    jupyter notebook
+
+8. Starte Spyder aus derselben Prompt, nicht über das Spyder aus dem Softwarekatalog:
+
+    spyder
+
+9. In Spyder: View, Panes, Notebook. Die Notebooks des Kurses liegen unter tag1 bis tag4. Die Skripte startest du weiter mit F5. Das Arbeitsverzeichnis bleibt python_basics-nov-2026.
+
+
+Nicht als Administrator
+
+Umgebung, Plugin, Kernel und beide Programme schreiben in dein Benutzerprofil. Startest du die Prompt als Administrator, legt Jupyter den Ordner AppData\Roaming\jupyter\runtime so an, dass dein normaler Benutzer dort nicht schreiben darf. Spyder meldet dann, die IPython-Konsole könne nicht starten. Als Administrator zu starten behebt das nur scheinbar.
+
+
+Nur wenn diese Meldung schon da ist
+
+Spyder schließen. In der normalen Prompt:
+
+    rmdir /s /q "%APPDATA%\jupyter\runtime"
+    mkdir "%APPDATA%\jupyter\runtime"
+
+Kommt "Zugriff verweigert", muss jemand mit Administratorrechten einmal den Ordner des Kursteilnehmers freigeben, mit dessen echtem Benutzernamen, nicht aus einer Admin-Prompt mit %APPDATA%:
+
+    icacls "C:\Users\NAME\AppData\Roaming\jupyter" /grant "NAME:(OI)(CI)M" /T
+
+Danach wieder die normale Miniforge Prompt verwenden und bei Schritt 8 weitermachen.
