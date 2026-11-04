@@ -8,3 +8,7 @@ dependencies:
   - jupyter
   - notebook
   - ipykernel
+  - numpy
+  - pandas
+  - matplotlib
+  - h5py

@@ -5,45 +5,78 @@
 #
 # Ziel
 #
-# Du bindest Module der Standardbibliothek ein, unterscheidest die drei üblichen Importformen und liest den Docstring einer Funktion. Eine Zuweisung in einer Funktion bleibt lokal.
+# Du bindest Module der Standardbibliothek ein, unterscheidest die drei üblichen
+# Importformen, liest einen Docstring und siehst, dass eine Zuweisung in einer
+# Funktion lokal bleibt. Danach liest du die Messreihe mit dem Modul `csv`.
 #
-# Arbeitsverzeichnis: `python_basics-nov-2026`. Skript mit F5, oder die Zellen von oben nach unten. Optional in der Konsole: `help(math.fabs)`. Die Ansicht verlässt du mit `q`.
+# Arbeitsverzeichnis: `python_basics-nov-2026`. Skript mit F5, oder die Zellen
+# von oben nach unten. Optional in der Konsole: `help(math.fabs)`. Die Ansicht
+# verlässt du mit `q`.
 
-# Drei Importformen
+# Was ist ein Modul?
 #
-#     import math
-#     import math as m
-#     from math import fabs
-#
-# | Form | Aufruf | Namensraum |
-# | --- | --- | --- |
-# | `import math` | `math.fabs` | der Modulname bleibt sichtbar |
-# | `import math as m` | `m.fabs` | kürzerer Name für dasselbe Modul |
-# | `from math import fabs` | `fabs` | der Name liegt direkt im Skript |
-#
-# Die erste Form ist in diesem Kurs der Normalfall. Man sieht, woher der Name kommt. `math` und `csv` gehören zur Standardbibliothek. Sie stehen nicht in `environment.yml`. `doctest` und `unittest` am Tag 4 ebenso.
+# Ein Modul ist eine Python-Datei mit wiederverwendbaren Namen. Die
+# Standardbibliothek kommt mit Python. Beispiele: `math`, `csv`.
 
-# CSV mit dem Modul `csv`
-#
-# Einheit 13 hat die Kommas selbst zerlegt. `csv.DictReader` liest die Kopfzeile und liefert jede Datenzeile als Dictionary. Die Schlüssel sind `timestamp`, `sensor` und `celsius`. `newline=""` lässt das Modul die Zeilenenden selbst erkennen.
-
-# Gültigkeitsbereiche und Docstring
-#
-# `first_above` weist `status` zu. Dieser Name gilt in der Funktion, nicht im Rest des Skripts. Den Namen `limit` liest die Funktion nur. Lesen eines globalen Namens braucht kein `global`. Erst eine Zuweisung würde einen lokalen Namen erzeugen, wie am Tag 2.
-#
-# Eingebaute Namen wie `len` und `open` liegen in einem weiteren Bereich. Python durchsucht ihn, wenn das Skript und die Funktion den Namen nicht selbst definiert haben.
-#
-# Der Docstring ist der Text direkt unter der Funktionszeile. `math.fabs.__doc__` ist dieser Text. In der IPython-Konsole zeigt `help(math.fabs)` dieselbe Hilfe. Docstrings in diesem Kurs sind Englisch.
-
-import csv
 import math
+print(math)
+print(type(math))
+
+# Form 1: `import math`
+
+print(math.fabs(-0.4))
+print(math.sqrt(9.0))
+
+value = -2.5
+print(math.fabs(value))
+print(value)
+
+# Form 2: `import math as m`
+
 import math as m
+print(m.fabs(-0.4))
+print(m.pi)
+
+# Form 3: `from math import fabs`
+
 from math import fabs
+print(fabs(-0.4))
+print(fabs(1.2))
+
+# Die drei Formen nebeneinander
 
 print("math.fabs", math.fabs(-0.4))
 print("m.fabs", m.fabs(-0.4))
 print("fabs", fabs(-0.4))
-print("doc", math.fabs.__doc__.splitlines()[0])
+
+# Docstring und `help`
+#
+# Der Docstring steht unter der Definition. `help(math.fabs)` zeigt ihn in der
+# Konsole. Docstrings in diesem Kurs sind Englisch.
+
+doc = math.fabs.__doc__
+print(doc.splitlines()[0])
+
+def add_one(value):
+    """Return value plus one."""
+    return value + 1
+
+print(add_one(3))
+print(add_one.__doc__)
+
+# Lokal und global
+#
+# Eine Zuweisung in einer Funktion erzeugt einen lokalen Namen. Globale Namen
+# darfst du lesen, ohne `global` zu schreiben.
+
+limit = 21.0
+print("outside", limit)
+
+def show_limit():
+    print("inside", limit)
+
+show_limit()
+print("still", limit)
 
 def first_above(values, limit):
     status = "inside"
@@ -53,10 +86,34 @@ def first_above(values, limit):
             break
     return status
 
+print(first_above([20.0, 21.4], 21.0))
+print(first_above([20.0, 20.5], 21.0))
+
 limit = 21.0
 print("limit outside", limit)
 print("status", first_above([20.0, 21.4], limit))
 print("limit still", limit)
+
+# Das Modul `csv`
+#
+# `csv.DictReader` liest die Kopfzeile und liefert jede Datenzeile als Dictionary.
+# `newline=""` gehört zum empfohlenen Muster.
+
+import csv
+print(csv)
+print(csv.DictReader)
+
+row = {"sensor": "bath", "celsius": "19.94"}
+print(row["sensor"])
+print(float(row["celsius"]))
+
+with open("data/readings.csv", encoding="utf-8", newline="") as handle:
+    reader = csv.DictReader(handle)
+    first = next(reader)
+print(first)
+print(first["sensor"], first["celsius"])
+
+# Messreihe mit `csv` und `math`
 
 bath = []
 with open("data/readings.csv", encoding="utf-8", newline="") as handle:
@@ -69,7 +126,8 @@ print("bath spread", round(math.fabs(max(bath) - min(bath)), 1))
 
 # Übung
 #
-# Der Abstand zwischen `low` und `high` ist der Betrag der Differenz. Lege ihn in `spread` ab. Nutze `math.fabs`. Für 19,5 und 21,0 ist das Ergebnis `1.5`.
+# Der Abstand zwischen `low` und `high` ist der Betrag der Differenz. Lege ihn
+# in `spread` ab. Nutze `math.fabs`. Für 19,5 und 21,0 ist das Ergebnis `1.5`.
 
 # gegeben:
 low = 19.5
