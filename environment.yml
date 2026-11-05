@@ -5,6 +5,7 @@ dependencies:
   - python=3.13
   - ipython
   - spyder
+  - spyder-notebook
   - jupyter
   - notebook
   - ipykernel
