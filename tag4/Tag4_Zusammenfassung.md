@@ -2,8 +2,8 @@
 
 ## Behandelte Themen
 
-1. **Klassen** (Einheit 16). Klasse, Instanz, `__init__`, `self`, Methode. Keine Vererbung.
-2. **Debugging** (Einheit 17). Haltepunkt, Menü **Debug**, Einzelschritt, Variablenexplorer, falscher Slice.
+1. **Klassen** (Einheit 16). Klasse, Instanz, `__init__`, `self`, Attribute, Methode. Zwei kurze Übungen: eigene Klasse `Sensor`, Methode `label` auf `Reading`. Keine Vererbung.
+2. **Debugging** (Einheit 17). Traceback lesen, typische Fehlermeldungen, Zwischenwerte mit `print`, Off-by-one, `try` / `except` bei Dateien.
 3. **Systematisches Testen und doctest** (Einheit 18). Beispiel im Docstring, üblicher Fall, Rand, Grenze, `python -m doctest`.
 4. **unittest** (Einheit 19). `TestCase`, `assertEqual`, `assertRaises`, eine absichtliche Fehlermeldung.
 
@@ -18,8 +18,8 @@
 ## Stichpunkte
 
 - Kelvin aus Grad Celsius: zur Zahl 273,15 addieren.
-- Der fehlerhafte Slice `values[1:]` wirft den ersten Wert weg. `values[:-1]` wirft den letzten weg.
-- Die Lösung von Einheit 17 zeigt die korrigierte Rechnung unter einem zweiten Namen. Die Funktion mit dem Fehler bleibt, bis du den Slice änderst.
+- `readings[len(readings)]` ist um eins zu weit. Der letzte Wert liegt bei `len(readings) - 1` oder `readings[-1]`.
+- `try` / `except` fängt erwartete äußere Fehler ab, zum Beispiel `FileNotFoundError` beim Lesen und `ValueError` bei `float`. Logikfehler korrigierst du.
 - Die Einheiten 18 und 19 prüfen sich beim Ausführen selbst.
 
 ## Zum Schluss

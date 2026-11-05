@@ -5,23 +5,63 @@
 #
 # Ziel
 #
-# Du definierst eine Klasse mit Konstruktor und einer Methode, erzeugst zwei Instanzen und hältst deren Daten auseinander.
+# Du schreibst eine eigene Klasse, legst Daten auf `self` ab, erzeugst Instanzen
+# und rufst Methoden auf.
 #
-# Arbeitsverzeichnis: `python_basics-nov-2026`. Skript mit F5, oder die Zellen von oben nach unten.
+# Arbeitsverzeichnis: `python_basics-nov-2026`. Skript mit F5, oder die Zellen
+# von oben nach unten.
 #
-# Das ist eine kurze Einführung. Vererbung, besondere Methodennamen über `__init__` hinaus und Entwurfsmuster gehören nicht zu diesem Kurs.
+# Das ist eine kurze Einführung. Vererbung, besondere Methodennamen über
+# `__init__` hinaus und Entwurfsmuster gehören nicht zu diesem Kurs.
 
 # Klasse und Instanz
 #
-# Am Tag 1 war `float` die Klasse der Temperaturzahl. `Reading` ist eine Klasse, die du selbst schreibst. Ein Aufruf `Reading("bath", 20.1)` erzeugt eine Instanz. `bath` und `room` sind zwei Instanzen.
-#
-# `__init__` richtet eine neue Instanz ein. `self` ist diese Instanz. `self.sensor` und `self.celsius` gehören zu ihr, nicht zur Klasse insgesamt.
-#
-# Wenn du danach `room.celsius = 21.6` setzt, steht `bath.celsius` noch auf 20,1. Die Zuweisung hat nur `room` getroffen.
+# Am Tag 1 war `float` die Klasse der Temperaturzahl. `Reading` ist eine Klasse,
+# die du selbst schreibst. Ein Aufruf erzeugt eine Instanz.
 
-# Methode
+text = "bath"
+print(type(text).__name__)
+print(type(20.1).__name__)
+
+# Eine minimale Klasse
+
+class Reading:
+    pass
+
+print(Reading)
+print(Reading.__name__)
+
+bath = Reading()
+print(type(bath).__name__)
+
+# `__init__` und `self`
 #
-# `deviation` und `kelvin` sind Methoden. Der Aufruf `bath.deviation(20.0)` übergibt `bath` als `self`. `kelvin` addiert 273,15. Für 20,1 Grad Celsius ist das 293,25.
+# `__init__` richtet eine neue Instanz ein. `self` ist diese Instanz.
+
+class Reading:
+    """One temperature reading from a named sensor."""
+
+    def __init__(self, sensor, celsius):
+        self.sensor = sensor
+        self.celsius = celsius
+
+bath = Reading("bath", 20.1)
+print(bath.sensor)
+print(bath.celsius)
+
+# Zwei Instanzen bleiben getrennt
+
+bath = Reading("bath", 20.1)
+room = Reading("room", 21.5)
+print("bath", bath.sensor, bath.celsius)
+print("room", room.sensor, room.celsius)
+room.celsius = 21.6
+print("bath still", bath.celsius)
+print("room now", room.celsius)
+
+# Methoden
+#
+# Beim Aufruf `bath.kelvin()` übergibt Python `bath` als `self`.
 
 class Reading:
     """One temperature reading from a named sensor."""
@@ -50,13 +90,38 @@ room.celsius = 21.6
 print("bath celsius still", bath.celsius)
 print("room celsius", room.celsius)
 
-# Übung
+# Übung 1
 #
-# Ergänze in der Klasse die Methode `is_within(self, reference, tolerance)`. Sie gibt `True` zurück, wenn der Betrag der Abweichung höchstens die Toleranz ist. Nutze `self.deviation`.
+# Schreibe die Klasse `Sensor` mit `__init__(self, name)`. Lege den Namen auf
+# `self.name` ab. Erzeuge eine Instanz `bath` mit dem Namen `"bath"` und gib
+# `bath.name` aus.
+
+# gegeben:
+sensor_name = "bath"
+
+# lösung ab hier:
+class Sensor:
+    def __init__(self, name):
+        
+
+bath =
+print("exercise 1", bath.name)
+
+# Lösung 1
+
+class Sensor:
+    def __init__(self, name):
+        self.name = name
+
+bath = Sensor("bath")
+print("solution 1", bath.name)
+
+# Übung 2
 #
-# `Reading("bath", 20.4).is_within(20.0, 0.5)` ist `True`. `Reading("bath", 21.0).is_within(20.0, 0.5)` ist `False`.
+# Ergänze in `Reading` die Methode `label(self)`. Sie gibt einen Text der Form
+# `"bath: 20.1 C"` zurück. Nutze `self.sensor`, `self.celsius` und `format`.
 #
-# Die Methoden davor sind vorgegeben. Schreibe nur den Körper von `is_within`.
+# `Reading("bath", 20.1).label()` ist `"bath: 20.1 C"`.
 
 # gegeben:
 class Reading:
@@ -66,23 +131,14 @@ class Reading:
         self.sensor = sensor
         self.celsius = celsius
 
-    def deviation(self, reference):
-        """Return this reading minus the reference value."""
-        return self.celsius - reference
-
-    def kelvin(self):
-        """Return this reading converted to kelvin."""
-        return self.celsius + 273.15
-
     # lösung ab hier:
-    def is_within(self, reference, tolerance):
-        difference =
-        return difference <= tolerance
+    def label(self):
+        
 
 
-print("exercise", Reading("bath", 20.4).is_within(20.0, 0.5))
+print("exercise 2", Reading("bath", 20.1).label())
 
-# Lösung
+# Lösung 2
 
 class Reading:
     """One temperature reading from a named sensor."""
@@ -91,18 +147,10 @@ class Reading:
         self.sensor = sensor
         self.celsius = celsius
 
-    def deviation(self, reference):
-        """Return this reading minus the reference value."""
-        return self.celsius - reference
+    def label(self):
+        return "{}: {} C".format(self.sensor, self.celsius)
 
-    def kelvin(self):
-        """Return this reading converted to kelvin."""
-        return self.celsius + 273.15
-
-    def is_within(self, reference, tolerance):
-        return abs(self.deviation(reference)) <= tolerance
-
-print("solution", Reading("bath", 20.4).is_within(20.0, 0.5))
-print("solution", Reading("bath", 21.0).is_within(20.0, 0.5))
+print("solution 2", Reading("bath", 20.1).label())
+print("solution 2", Reading("room", 21.5).label())
 
 # Weiter mit `tag4/17_debugging.ipynb`.

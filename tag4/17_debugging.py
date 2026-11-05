@@ -1,71 +1,142 @@
-# Debugging in Spyder
+# Debugging
 #
 # Tag 4, Einheit 17
 # Skript: `tag4/17_debugging.py`
 #
 # Ziel
 #
-# Du setzt einen Haltepunkt, startest den Debugger und liest den falschen Zwischenwert im Variablenexplorer.
+# Du liest typische Fehlermeldungen, prüfst Zwischenwerte mit `print`,
+# erkennst einen einfachen Off-by-one-Fehler und fängst erwartete Fehler mit
+# `try` / `except` ab.
 #
-# Arbeitsverzeichnis: `python_basics-nov-2026`.
+# Arbeitsverzeichnis: `python_basics-nov-2026`. Zellen von oben nach unten
+# ausführen.
 
-# Ablauf
+# Was ist Debugging?
 #
-# 1. Lies `mean_without_ends`, bevor du sie änderst.
-# 2. Setze einen Haltepunkt in die Zeile mit `return`. Klicke links neben die Zeilennummer.
-# 3. Starte über das Menü Debug den Eintrag Debug. In vielen Spyder-Versionen ist das Strg+F5.
-# 4. Geh mit Step einen Schritt. Im Variablenexplorer erscheint `chosen`.
-# 5. Vergleiche `chosen` mit der Reihe. Beende den Lauf mit Continue.
-# 6. Korrigiere den Slice und führe die Datei mit F5 aus.
-#
-# Wenn im Variablenexplorer noch Werte aus einem früheren Lauf stehen, starte die IPython-Konsole neu und debugge erneut.
-#
-# Im Notebook gibt es keinen Spyder-Haltepunkt. Öffne für diese Einheit das Skript.
+# Debugging heißt: herausfinden, warum ein Programm nicht das tut, was du
+# erwartest. Entweder bricht es ab (Traceback), oder das Ergebnis ist falsch.
 
-# Der Fehler
+# Eine Fehlermeldung lesen
 #
-# Die Reihe ist `[1.0, 2.0, 3.0, 4.0]`. Der Mittelwert ohne den letzten Wert ist der Mittelwert von 1, 2 und 3, also 2,0.
+# Die absichtlichen Abbrüche bleiben hier auskommentiert, damit F5 durchläuft.
+# Im Notebook führst du die Zellen mit dem Fehler aus und liest den Traceback.
+
+numbers = [10.0, 20.0, 30.0]
+# print(numbers[5])
+print(len(numbers))
+print(numbers[0], numbers[-1])
+
+# Typische Fehlermeldungen
 #
-# Die Funktion schneidet stattdessen den ersten Wert ab: `chosen = values[1:]`. Der Mittelwert von 2, 3 und 4 ist 3,0. Der Fehler ist kein Abbruch, sondern ein falsches Ergebnis. Dafür ist der Haltepunkt da: das Skript läuft, und ein Name hat den falschen Inhalt.
+# NameError: print(temperature)
+# TypeError: print("20.1" + 1)
+# ValueError: print(float("room"))
+# IndexError: print([19.8, 20.1, 19.9][3])
+# ZeroDivisionError: print(10 / 0)
+# KeyError: print({"sensor": "bath"}["timestamp"])
+# FileNotFoundError: open("missing_file.txt")
 
-def mean_without_ends(values):
-    """Return the mean of every value except the last one.
+# Mit `print` Zwischenwerte prüfen
 
-    The slice below is intentionally wrong.
-    """
-    chosen = values[1:]
-    return sum(chosen) / len(chosen)
+total = 0.0
+for value in [1.0, 2.0, 3.0]:
+    total = total + value
+    print("value", value, "total", total)
+print("end", total)
 
-sample = [1.0, 2.0, 3.0, 4.0]
-print("sample", sample)
-print("buggy result", mean_without_ends(sample))
-print("Set a breakpoint on the return line of mean_without_ends.")
+# Off-by-one: einer zu weit
+#
+# Die Liste hat drei Werte. Die Indizes sind 0, 1 und 2. Die Länge ist 3.
+# readings[len(readings)] greift einen Schritt zu weit.
+
+readings = [19.8, 20.1, 19.9]
+print("length", len(readings))
+print("last valid index", len(readings) - 1)
+print("last value", readings[len(readings) - 1])
+# print(readings[len(readings)])
+
+index = len(readings)
+print("index", index)
+print("allowed", 0, "to", len(readings) - 1)
+# print(readings[index])
+
+print(readings[len(readings) - 1])
+print(readings[-1])
+
+# Fehler abfangen: `try` und `except`
+#
+# Manchmal soll das Programm weiterlaufen, wenn ein Schritt scheitern kann.
+# In Python heißt das `try` / `except`. Sinnvoll bei äußeren Ursachen wie einer
+# fehlenden Datei. Off-by-one und Tippfehler korrigierst du, statt sie zu
+# verstecken.
+
+path = "data/notes.txt"
+try:
+    with open(path, encoding="utf-8") as handle:
+        text = handle.read()
+    print(text[:40])
+except FileNotFoundError:
+    print("file not found:", path)
+
+path = "data/does_not_exist.txt"
+try:
+    with open(path, encoding="utf-8") as handle:
+        text = handle.read()
+    print(text)
+except FileNotFoundError:
+    print("file not found:", path)
+
+value = "20.1"
+try:
+    number = float(value)
+    print(number)
+except ValueError:
+    print("not a number:", value)
+
+value = "room"
+try:
+    number = float(value)
+    print(number)
+except ValueError:
+    print("not a number:", value)
 
 # Übung
 #
-# `chosen` soll alle Werte außer dem letzten enthalten. Der Slice dafür ist `values[:-1]`. Trag ihn in der Übung ein. Die Funktion weiter oben bleibt falsch, damit du dort den Haltepunkt setzen kannst. Das Ergebnis ist `2.0`.
+# 1. Lies `path` mit `try` / `except FileNotFoundError`. Wenn die Datei fehlt,
+#    gib `print("file not found:", path)` aus. Wenn sie da ist, gib die ersten
+#    20 Zeichen aus.
+# 2. Wandle `raw` mit `float` um. Fange `ValueError` ab und gib dann
+#    `print("not a number:", raw)` aus. Sonst gib die Zahl aus.
+#
+# Für die Vorgaben unten siehst du zuerst `file not found: data/does_not_exist.txt`
+# und danach `not a number: room`.
 
 # gegeben:
-sample = [1.0, 2.0, 3.0, 4.0]
+path = "data/does_not_exist.txt"
+raw = "room"
 
 # lösung ab hier:
-def mean_without_ends(values):
-    chosen =
-    return sum(chosen) / len(chosen)
 
 
-print("exercise", mean_without_ends(sample))
+print("exercise done")
 
 # Lösung
-#
-# Die Funktion oben bleibt für den Debugger falsch, bis du den Slice änderst. Die Lösung zeigt die korrigierte Rechnung unter einem zweiten Namen.
 
-def mean_without_last(values):
-    """Return the mean of every value except the last one."""
-    chosen = values[:-1]
-    return sum(chosen) / len(chosen)
+path = "data/does_not_exist.txt"
+raw = "room"
 
-sample = [1.0, 2.0, 3.0, 4.0]
-print("solution", mean_without_last(sample))
+try:
+    with open(path, encoding="utf-8") as handle:
+        text = handle.read()
+    print(text[:20])
+except FileNotFoundError:
+    print("file not found:", path)
+
+try:
+    number = float(raw)
+    print(number)
+except ValueError:
+    print("not a number:", raw)
 
 # Weiter mit `tag4/18_doctest.ipynb`.
