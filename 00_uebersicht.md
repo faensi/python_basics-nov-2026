@@ -39,6 +39,14 @@ Zusammenfassung: `tag2/Tag2_Zusammenfassung.md`
 | 14      | `tag3/14_module_und_namensraeume`  | Standardmodule, Import, Namensräume, Gültigkeitsbereiche, `help` |
 | 15      | `tag3/15_eigene_module`            | Eigenes Modul `measurement.py`, Docstring                          |
 
+Zusatz ohne Einheitsnummer:
+
+- `tag3/csv_pandas_numpy.ipynb` — CSV mit pandas und numpy
+- `tag3/matplotlib_csv.ipynb` — Visualisierung aus CSV mit matplotlib
+- `tag3/live_diagramm.ipynb` — Array als Live-Diagramm
+- `tag3/hdf5_h5py.ipynb` — HDF5-Dateien mit h5py
+- `tag3/spectral_eval_file.ipynb` — Klasse `SpectralEvalFile` für spektrale Auswertungsdateien
+
 Zusammenfassung: `tag3/Tag3_Zusammenfassung.md`
 
 ## Tag 4: Klassen, Debugging und Tests
@@ -46,7 +54,7 @@ Zusammenfassung: `tag3/Tag3_Zusammenfassung.md`
 | Einheit | Datei                 | Inhalt                                      |
 | ------- | --------------------- | ------------------------------------------- |
 | 16      | `tag4/16_klassen`   | Kurze Einführung: Klasse, Instanz, Methode |
-| 17      | `tag4/17_debugging` | Haltepunkt und Einzelschritt in Spyder      |
+| 17      | `tag4/17_debugging` | Debugging: Traceback, `print`, `try` / `except` |
 | 18      | `tag4/18_doctest`   | Systematisches Testen und `doctest`       |
 | 19      | `tag4/19_unittest`  | `unittest`                                |
 
@@ -54,9 +62,13 @@ Zusammenfassung: `tag4/Tag4_Zusammenfassung.md`
 
 ## Daten
 
-- `data/readings.csv`: kurze Messreihe zweier Sensoren, Bad und Raum
-- `data/calibration.csv`: Referenzwert und Anzeige
-- `data/notes.txt`: kleines Probenprotokoll
+- `data/readings.csv`: Messreihe zweier Sensoren, Bad und Raum (je 250 Werte)
+- `data/calibration.csv`: Referenzwert und Anzeige (200 Werte)
+- `data/notes.txt`: Probenprotokoll mit vielen Zeitzeilen
+- `data/pump_pressure.csv`: Druckreihe Einlass und Auslass (je 300 Werte)
+- `data/gauge_check.csv`: Referenzdruck und Anzeige (180 Werte)
+- `data/flow_series.h5`: Durchfluss Einlass und Auslass (je 500 Werte)
+- `data/data-x1.txt`: spektrale Auswertungsdatei mit Info-Block und Messreihe
 
 Einheit 13 schreibt zusätzlich `data/report.txt`. Diese Datei ist ein Ergebnis, keine Vorlage.
 
